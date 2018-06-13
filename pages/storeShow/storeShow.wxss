@@ -1,0 +1,79 @@
+/* pages/storeShow/storeShow.wxss */
+.store{
+  height: 100%;
+  width: 100%;
+}
+.store .storeTab{
+  height: 66rpx;
+  text-align: center;
+  width:60%;
+  background: #fff;
+  display:flex;
+  flex-direction:row;
+  padding:0 20%;
+
+}
+.storeTab text{
+   font-size: 26rpx;
+   letter-spacing: 1rpx;
+   color: #A1A3B0;
+   line-height: 66rpx;
+   flex:1
+}
+.storeTab .selected{
+  color: #000;
+  background: url('http://oss-cn-shanghai.aliyuncs.com/cc-image/chuangchuang/cc_other/20180117/20180117_1516176995046.png') bottom center no-repeat;
+}
+.store .show{
+ display: block
+}
+.store .hide{
+ display: none
+}
+.content{
+  position: absolute;
+  width: 80%;
+  height: 85%;
+  margin:5% 10%;
+  
+}
+.content .slideImg{
+  height: 95%;
+}
+swiper{
+  height: 100%
+}
+
+/**轮播小数点**/
+.slideImg .wx-swiper-dots.wx-swiper-dots-horizontal{
+     bottom: 20rpx;
+     position: absolute;
+     z-index: 100
+}
+.slideImg .wx-swiper-dot{
+    width:40rpx;
+    display: inline-flex;
+    height: 10rpx;
+    margin-left: 20rpx;
+    justify-content:space-between;
+}
+.slideImg .wx-swiper-dot::before{
+    content: '';
+    flex-grow: 1; 
+    background: rgba(255,255,255,0.8);
+    border-radius: 8rpx
+}
+.slideImg .wx-swiper-dot-active::before{
+    background:rgba(244,0,0,0.8);   
+}
+
+.footer{
+  font-size: 22rpx;
+  color: #9FADB6;
+  position: absolute;
+  bottom:3%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items:center;
+}

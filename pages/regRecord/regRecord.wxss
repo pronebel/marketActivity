@@ -1,0 +1,145 @@
+.articleSea .articleinput {
+  height: 56rpx;
+  border-radius: 100rpx;
+  font-size: 24rpx;
+  background-color: #fff;
+  padding: 0 30rpx;
+}
+.articleSea {
+  width: 710rpx;
+  margin: 16rpx auto;
+}
+.recordSieve {
+  height: 88rpx;
+  line-height: 88rpx;
+  background-color: #fff;
+  font-size: 30rpx;
+}
+.recordSieve view {
+  float: left;
+  width: 250rpx;
+  text-align: center;
+}
+.recordSieve view text {
+  display: block;
+  width: 210rpx;
+  height: 88rpx;
+  margin: 0 auto;
+}
+.recordSieve .activs {
+  color: #FF6B4E;
+  border-bottom: 4rpx solid #FF6B4E;
+}
+.recordListBox {
+  /* padding: 0 20rpx;  */
+  margin: 10rpx 0 100rpx 0;
+}
+.recordList {
+  width: 710rpx;
+  border-left: 8rpx solid #ccc;
+  background-color: #fff;
+  margin: 20rpx auto;
+  border-radius: 0 10rpx 10rpx 0;
+  overflow: hidden;  
+}
+.periphery {
+  padding: 0 20rpx 0 22rpx;
+}
+.nameClass {
+  height: 74rpx;
+}
+.shells {
+  height: 74rpx;
+  line-height: 74rpx;
+  border-bottom: 2rpx solid #ececec;
+}
+.pinState {
+  font-size: 24rpx;
+  color: #FF927D;
+  float: right;
+}
+.pinName {
+  font-size: 28rpx;
+  font-weight: 600;
+}
+.pinchInfor {
+  font-size: 24rpx;
+  color: #999999;
+  /* height: 144rpx; */
+  padding: 10rpx 0 16rpx 0;  
+}
+.projectBox {
+  display: none;
+}
+.openShow {
+  display: block;
+}
+.pinchInfor>view {
+  margin: 10rpx 0;
+}
+.pinchInfor .tel {
+  font-size: 26rpx;
+  color: #FF6B4E;
+  margin-left: 20rpx;
+}
+.pinchInfor .stars {
+  font-size: 26rpx;
+  margin-left: 30rpx;
+}
+.times {
+  display: flex;
+   justify-content: space-between; 
+}
+.pbhead {
+  font-size: 28rpx;
+}
+.pbhead icon {
+  color: #FF927D;
+  font-size: 30rpx;
+  /* font-weight: 600; */
+  margin-right: 10rpx;
+}
+.paymo view {
+  display: flex;
+  justify-content: space-between;
+  height: 72rpx;
+  line-height: 72rpx;
+  border-bottom: 2rpx solid #ececec;
+}
+.payLeft {
+  font-size: 26rpx;
+  color: #666666;
+}
+.payRight {
+  font-size: 24rpx;
+}
+.exportName {
+  color: #fff;
+  width: 100%;
+  height: 98rpx;
+  font-size: 34rpx;
+  background-color: #FF6B4E;
+  text-align: center;
+  line-height: 98rpx;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+}
+
+.recordSeach {
+  width: 30rpx;
+  height: 35rpx;
+  position: absolute;
+  right: 30rpx;
+  top: 14rpx;
+  z-index: 10;
+}
+
+.regPortrait {
+  width:25px;
+  height:25px;
+  margin:0 30rpx 0 10rpx;
+  border-radius: 50%;
+  position:relative;
+  top:12rpx;
+}

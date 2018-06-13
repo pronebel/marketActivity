@@ -1,0 +1,226 @@
+.activeState {
+  font-size: 28rpx;
+  color: #666666;
+  border-bottom: 2rpx solid #dfdfdf;
+  background-color: #fff;
+}
+.activeState text {
+  display: inline-block;
+  width: 149.2rpx;
+  height: 88rpx;
+  line-height: 88rpx;
+  text-align: center;
+}
+.activetState {
+  color: #FF6B4E;
+  border-bottom: 4rpx solid #FF6B4E;
+}
+.activityCateg {
+  font-size: 26rpx;
+  color: #666666;
+  height: 88rpx;
+  line-height: 88rpx;
+  background-color: #fff;
+  position: relative;
+}
+.activityCateg text {
+  display: inline-block;
+  height: 48rpx;
+  padding: 0 16rpx;
+  line-height: 48rpx;
+  text-align: center;
+  background-color: #F2F2F2;
+  margin: 0 20rpx;
+  border-radius: 100rpx;
+}
+.activityCateg .categActive {
+  color: #fff;
+  background-color: #FF6B4E;
+}
+.smallAd {
+  font-size: 22rpx;
+  color: #A24532;
+  background-color: #FFF7ED;
+  height: 50rpx;
+  line-height: 50rpx;
+  padding: 0 20rpx;
+  position: relative;
+}
+
+.ministerBox {
+
+}
+.ministerList {
+  width: 710rpx;
+  margin: 20rpx auto;
+  /* height: 196rpx; */
+  background-color: #fff;
+  padding: 20rpx 0 0 0;
+  box-sizing: border-box;
+  border-radius: 12rpx;
+  box-shadow: 4rpx 4rpx 4rpx #eee;
+}
+.toolds {
+  padding: 0 20rpx;
+}
+.openShow {
+  display: none;
+}
+.groups {
+  color: #fff;
+  display: block;
+  flex: 0 0 40rpx;
+  height: 40rpx;
+  font-size: 24rpx;
+  text-align: center;
+  line-height: 40rpx;
+  border-radius: 50rpx;
+}
+.topTopic {
+  display: flex;
+  border-bottom: 2rpx solid #e4e4e4;
+  padding: 0 0 20rpx 0;
+}
+.theadings {
+  font-size: 30rpx;
+  margin-left: 20rpx;
+}
+.browse {
+  font-size: 26rpx;
+  height: 79rpx;
+  line-height: 79rpx;
+  display: flex;
+  justify-content: space-between;
+}
+.peoplnum {
+  color: #999999;
+}
+.peopleAfter {
+  margin-left: 40rpx;
+}
+.stateacs {
+  color: #FF6B4E;
+}
+.stateacs icon {
+  color: #ccc;
+}
+.browBar {
+  height: 88rpx;
+  line-height: 88rpx;
+  border-bottom: 2rpx solid #ececec;
+}
+.browName {
+  font-size: 30rpx;
+}
+.browLink {
+  color: #FF6B4E;
+  font-size: 24rpx;
+  margin-left: 20rpx;
+  display: inline-block;
+  width: 414rpx;
+  overflow: hidden;
+  text-overflow:ellipsis;
+  white-space: nowrap;
+}
+.browBtn {
+  display: inline-block;
+  width: 88rpx;
+  height: 44rpx;
+  font-size: 26rpx;
+  color: #666666;
+  border: 2rpx solid #666666;
+  border-radius: 9rpx;
+  text-align: center;
+  line-height: 45rpx;
+  margin-left: 20rpx;
+}
+.wthys {
+}
+.wthys .browName {
+  display: block;
+  height: 88rpx;
+  line-height: 88rpx;
+}
+.fournumBox {
+  display: flex;
+}
+.fournum {
+  width: 160rpx;
+  height: 156rpx;
+  border: 2rpx solid #E4E4E4;
+  margin-right: 8rpx;
+  border-radius: 8rpx;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.fournum text {display: block;} 
+.numberName {
+  color: #666666;
+  font-size: 24rpx;
+  margin-top: 30rpx;
+}
+.throu {color: #0085FF;font-size:40rpx;}
+.sharing {color: #06B940;font-size:40rpx;}
+.enrol {color: #6A00CF;font-size:40rpx;}
+.succs {color: #00AED8;font-size:40rpx;}
+
+.operation {
+  background-color: #FAFAFA;
+  display: flex;
+  margin: 30rpx 0 0 0;
+  border-radius: 0 0 12rpx 12rpx;
+}
+.operation view {
+  width: 160rpx;
+  height: 98rpx;
+  color: #666666;
+  font-size: 24rpx;
+  text-align: center;
+  margin-right: 10rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.operation icon {
+  font-size: 42rpx;
+}
+ .adminClose {
+  font-size: 32rpx;
+  position: absolute;
+  right: 18rpx;
+}
+
+.test {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  background-color: #fff;
+  text-align: center;
+}
+.ritual { background-color: #0ACD68 }
+.purchase { background-color: #23A6FB }
+.group { background-color: #FF7F38  }
+.cut { background-color: #9E4DFD }
+.seconds { background-color: #FF0000 }
+.will { background-color: #FB23A2 }
+.securities { background-color: #FFA535 }
+.ritual { background-color: #0ACD68 }
+
+.moreClass {
+  position: absolute;
+  z-index: 10;
+  background-color: #fff;
+  border: solid #e4e4e4;
+  border-width: 2rpx 0 2rpx 0;
+}
+.mores {
+  display: inline-block;
+  width: 98rpx;
+  text-align: center;
+}

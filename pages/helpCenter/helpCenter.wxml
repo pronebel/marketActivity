@@ -1,0 +1,48 @@
+<view class="container">
+  <ul class="helplist db">
+    <li class="addItem db comItemArrow bbe4" data-type="bargain" bindtap="jump">
+      <span class="fl leftTitle">如何创建砍价活动</span>
+      <i class="iconfont icon-fanhui_you fr"></i>
+    </li>
+    <li class="addItem db comItemArrow bbe4" data-type="tuan" bindtap="jump">
+      <span class="fl leftTitle">如何创建拼团活动</span>
+      <i class="iconfont icon-fanhui_you fr"></i>
+    </li>
+    <li class="addItem db comItemArrow bbe4" data-type="chou" bindtap="jump">
+      <span class="fl leftTitle">如何创建抽奖活动</span>
+      <i class="iconfont icon-fanhui_you fr"></i>
+    </li>
+    <li class="addItem db comItemArrow bbe4" data-type="juan" bindtap="jump">
+      <span class="fl leftTitle">如何创建优惠劵活动</span>
+      <i class="iconfont icon-fanhui_you fr"></i>
+    </li>
+    <li class="addItem db comItemArrow bbe4" data-type="xian" bindtap="jump">
+      <span class="fl leftTitle">如何创建集赞赢现金/礼品活动</span>
+      <i class="iconfont icon-fanhui_you fr"></i>
+    </li>
+    <li class="addItem db comItemArrow bbe4" data-type="gouwu" bindtap="jump">
+      <span class="fl leftTitle">如何创建0/1/N元购活动</span>
+      <i class="iconfont icon-fanhui_you fr"></i>
+    </li>
+    <li class="addItem db comItemArrow bbe4" data-type="zizhao" bindtap="jump">
+      <span class="fl leftTitle">如何设置子账号</span>
+      <i class="iconfont icon-fanhui_you fr"></i>
+    </li>
+
+    <li class="addItem db comItemArrow bbe4" data-type="creat" bindtap="jump">
+      <span class="fl leftTitle">如何开通活动的创建权限</span>
+      <i class="iconfont icon-fanhui_you fr"></i>
+    </li>
+    <li class="addItem db comItemArrow bbe4" data-type="withdraw" bindtap="jump">
+      <span class="fl leftTitle">商家如何快速提现</span>
+      <i class="iconfont icon-fanhui_you fr"></i>
+    </li>
+    <li class="addItem db comItemArrow bbe4" data-type="charge" bindtap="jump">
+      <span class="fl leftTitle">新营销工具是如何收费的</span>
+      <i class="iconfont icon-fanhui_you fr"></i>
+    </li>
+   
+
+  </ul>
+
+</view>

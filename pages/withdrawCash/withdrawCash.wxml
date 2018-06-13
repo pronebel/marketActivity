@@ -1,0 +1,21 @@
+<view class="container">
+  <view class='flex header'>
+     <image class='logo' src="{{imgurl}}"></image>
+     <view class='list_con'>
+       <p class="db fc6 fs26">提现微信</p>
+       <p class="db">{{name}}</p>
+     </view>
+  </view>
+  <ul class="db">
+    <li class="db fs30">可提资金</li>
+    <li class="db red fs52">￥{{canWithdraw}}</li>
+    <li class="db fs30">在途资金￥{{hasFreeze}}</li>
+    <li class="db fc9 fs26">在途资金：无法今日提现的金额~</li>
+    <li class="db red" wx:if="{{msg!=''}}">{{msg}}</li>
+  </ul>
+  <view class='BT'>
+     <button class='apply' bindtap="withdraw">申请提现</button>
+      <button class='record fc3' bindtap='jumpRecord'>提现记录</button>
+  </view>
+
+</view>

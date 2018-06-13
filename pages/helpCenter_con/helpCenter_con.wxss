@@ -1,0 +1,20 @@
+.container{
+  padding: 20rpx;
+  padding-top: 35rpx
+}
+.title{text-align: center}
+text{color: #999;font-size: 24rpx}
+.subtitle{
+  margin: 25rpx 0 15rpx 0;
+  color: #666
+}
+.hide{
+  display: none
+}
+.db{
+  margin: 25rpx 0
+}
+.juanhead {
+  color: #666;
+  font-size: 26rpx;
+}

@@ -1,0 +1,26 @@
+@import "../../../lib/varietyActivity.wxss";/* 活动样式 */
+.choose{
+  width:60rpx;
+  height:52rpx;
+  line-height: 52rpx;
+  background: #FF6B4E;
+  color: #fff;
+  margin:8rpx 0 12rpx 10rpx;
+  padding:0 14rpx;
+  border-radius:8rpx;
+  text-align: center
+
+}
+.whiteback{
+  height: 850rpx;
+  margin-top:160rpx;
+}
+.musichoose{
+  height:80rpx;
+line-height:80rpx;
+margin-top:30rpx;
+}
+.free{
+  color: #7ec432;
+  margin-left: 10rpx
+}

@@ -1,0 +1,5 @@
+<!--pages/authorized.wxml-->
+<view class='authorizedTop'>微信授权</view>
+<image src='http://image.chuangchuang.cn/chuangchuang/cc_other/20180514/20180514_1526291132820.png' class='logo'></image>
+<view class='authorizedTip'>新零售训练营申请获取你的公共信息（昵称,头像等）</view>
+<button open-type="getUserInfo" bindgetuserinfo="bindgetuserinfo" class='authorizedButton'>授权登录</button>

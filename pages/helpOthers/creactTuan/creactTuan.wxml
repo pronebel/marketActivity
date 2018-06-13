@@ -1,0 +1,42 @@
+<view>
+  <view class="helpheader">帮助中心</view>
+  <view class="box">
+    <view class="biaot">如何创建拼团活动</view>
+    <view class="text">
+     拼团应用场景
+拼团适用于一定知名度的店铺，通过对产品有一定认可度的老顾客带动新顾客，来提升商家店铺的业绩。可以在店铺大型活动中使用。
+    </view>
+    <view class="text">
+      第一步：点击创建活动
+    </view>
+    <view class="text">
+      第二步：选择拼团活动，并确认活动发布细则
+    </view>
+    <view class="text">
+      第三步：设置活动基本信息
+      <text>注意：</text>
+      <text>1、同店活动是指基于这个帐号下建立的其他活动与本次建立的活动进行关联</text>
+      <text>2、团长优惠是指第一个拼团活动发起人（即团长）享有比拼团价格更低的优惠</text>
+      <text>3、拼团人数是指用户参与拼团成功的人数</text>
+      <text>4、限购数量是指单个用户购买产品的数量</text>
+      <text>5、拼团价格是指该拼团成功后的最低价（目前拼团价格没有设置阶梯价，后续会持续开放阶梯价格功能）
+          最后发布活动</text>
+    </view>
+    <view class="text">
+      第四步：点击活动管理
+    </view>
+    <view class="text">
+      第五步：点击该活动，点击活动海报，生成图片（二维码），保存图片并进行转发
+      <text>注意：</text>
+      <text>1、点击名单可以查看参与拼团活动人员的信息，目前还未开放名单导出功能，后续会开放名单导出功能。</text>
+    </view>
+    <view class="images"><image src="../../../images/kan1.png"></image></view>  
+    <view class="images"><image src="../../../images/kan2.png"></image></view>
+    <view class="images"><image src="../../../images/kan3.png"></image></view>
+    <view class="images"><image src="../../../images/kan4.png"></image></view>  
+    <view class="images"><image src="../../../images/kan5.png"></image></view>
+    <view class="images"><image src="../../../images/kan6.png"></image></view>
+    <view class="images"><image src="../../../images/kan7.png"></image></view>  
+    <view class="images"><image src="../../../images/kan8.png"></image></view>
+  </view>
+</view>

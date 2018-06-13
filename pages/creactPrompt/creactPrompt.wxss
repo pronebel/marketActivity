@@ -1,0 +1,30 @@
+view {
+  color: #666666;
+  font-size: 26rpx;
+}
+text {
+  display: block;
+  color: #000;
+  font-size: 30rpx;
+  margin: 20rpx 0;
+}
+
+.testx{
+  text-indent: 40rpx;
+  line-height: 45rpx;
+}
+
+.red {
+  text-indent: 40rpx;
+  color: #f00;
+  margin: 40rpx 0;
+}
+
+.through {
+  color: #fff;
+  background-color: #FF6B4E;
+  height: 88rpx;
+  line-height: 88rpx;
+  text-align: center;
+  border-radius: 10rpx;
+}

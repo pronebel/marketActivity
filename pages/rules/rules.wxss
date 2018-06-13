@@ -1,0 +1,34 @@
+.wisdom {
+  color: #333333;
+  font-size: 32rpx;
+  text-align: center;
+  margin: 60rpx 0 30rpx 0;
+}
+.consentscon {
+  width: 34rpx;
+  height: 34rpx;
+  border-radius: 100%;
+  background-color: #fff;
+  border: 2rpx solid #ccc;
+  position: relative;
+  top: 8rpx;
+  margin-right: 25rpx;
+}
+.actives {
+  border: none;
+  background-image: url('../../images/btn-xuanze-xz.png')
+}
+.checkedsa {
+  width: 690rpx;
+  margin: 23rpx auto;
+}
+.creactacty {
+  width: 690rpx;
+  height: 88rpx;
+  color: #fff;
+  text-align: center;
+  line-height: 88rpx;
+  background-color: #FF6B4E;
+  border-radius: 100rpx;
+  margin: 0 auto;
+}

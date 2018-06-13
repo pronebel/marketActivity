@@ -1,0 +1,33 @@
+<view class="container">
+  <view class="tick" wx:if="{{type=='add'}}">
+    <icon type="success" size="{{iconSizes}}"/>
+    <text class='db' style='margin-top:10rpx'>识别成功</text>
+  </view>  
+   <view class='db title'>为方便区分子账号，请填写备注</view>
+  <view class='flex card clearfix'>
+     <view class='redbar'></view>
+     <radio-group bindchange="swiperChange"> 
+     <ul class="mainbody db">
+       <li class="db flex">
+          <p class='dbi'>备注名：</p>
+          <input class='dbi' placeholder='子账号备注' bindinput='listenName' value='{{description}}'></input>
+      </li>
+       <li class="db">
+          <text class='dbi'>角色</text>
+          <span><radio checked='{{role=="SHOPKEPPER"}}' color="#FF6B4E" value='SHOPKEPPER'></radio>店长</span>
+          <em>无法提现，可创建，编辑，删除活动</em>
+       </li>
+       <li class="db">
+         <text class='dbi'></text>
+         <span><radio color="#FF6B4E" checked='{{role=="SALESMAN"}}' value='SALESMAN'></radio>店员</span>
+         <em>只能核销和查看活动，无法操作任何设置</em>
+         </li>
+     </ul>
+     </radio-group>
+  </view>
+  <view class='bt'>
+    <button bindtap='save'>保存</button> 
+  </view>
+ 
+
+</view>

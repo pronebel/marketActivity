@@ -1,0 +1,19 @@
+
+<view>
+  <view class="helpheader">帮助中心</view>
+  <view class="box">
+    <view class="biaot">新营销工具资金微信提现规则</view>
+    <view class="text">
+      如何提现：
+点击商家中心的资金提现按钮即可看到可提现的具体金额，点击提现后资金将在3个工作日由平台审核通过后打到所属于微信钱包。因通过微信支付提现时需收取手续费0.6%，新营销工具将在提现时扣除，记录在商户中心查看。
+    </view>
+    <view class="text">
+      提现规则：单个商家，单笔日限额2万；提现前微信帐号需要开通钱包实名认证功能，否则无法提现到账。
+    </view>
+    <view class="text">
+      在途资金：活动客户已经支付，但未最终核算，或拼团失败等原因，显示在途资金。
+    </view>
+    <view class="images"><image src="../../../images/ti1.png"></image></view>
+    <view class="images"><image src="../../../images/ti2.png"></image></view>
+  </view>
+</view>

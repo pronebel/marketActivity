@@ -1,0 +1,49 @@
+<view class="" style="position:relative;">
+  <!-- <input placeholder='搜索' class="seachs"/>
+  <view class="work-screen">
+    <view>
+      <text class="sieve">全部</text>
+      <text class="sieve">砍价</text>
+      <text class="sieve">拼团</text>
+      <text class="sieve">抽奖</text>
+    </view>
+  </view> -->
+  <!--  -->
+  <view>
+    <view class="regimentsList" wx:key="{{ itemName.id }}" wx:for="{{ workList }}" wx:for-item="itemName">
+      <view class="regiments">
+        <view class="rehimentImg">
+          <image mode="aspectFill" src="{{ itemName.activityTemplate.mainPic }}" />
+        </view>
+        <view class="regimentText">
+          <text class="regimentName">{{ itemName.activityTemplate.title }}</text>
+          <view class="regiwatch" bindtap='lookActivity'
+            data-img="{{ itemName.activityTemplate.backgroundPic }}"
+            data-type="{{itemName.activityTemplate.type}}"
+            data-picone="{{ itemName.activityTemplate.backgroundPic }}"
+            data-pictwo='{{ itemName.activityTemplate.mainPic }}'
+            data-name="{{ itemName.activityTemplate.title }}"
+          >
+          <i class="iconfont icon-chakan eyes"></i>查看示例</view>
+          <view class="handlingBtn" bindtap="goMaking" data-type="{{itemName.activityTemplate.type}}" data-pictwo='{{ itemName.activityTemplate.mainPic }}' data-name="{{ itemName.activityTemplate.title }}">马上制作</view>
+        </view>
+      </view>
+    </view>
+  </view>
+  <!--  -->
+  <view class="workModel" hidden='{{ postersmen }}'>
+    <view class="modelsBox">
+      <scroll-view class="secondKill" scroll-y>
+        <view>
+          <image mode="widthFix" src="{{ imgActivity }}"></image>
+        </view> 
+      </scroll-view>
+      <view class="fullName">
+        <view class="killName">{{ actiName }}</view>
+        <view class="killBtn" bindtap='playGoMaking'>马上制作</view>
+      </view>
+      <image class="subtra" src="../../images/icon-guanbi-ig.png" bindtap='close'></image> 
+    </view>
+  </view>
+  <!--  -->
+</view>

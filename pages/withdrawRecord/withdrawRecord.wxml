@@ -1,0 +1,32 @@
+<view class="container">
+  <view class='tab'>
+     <span class="dbi {{selected1?'act':''}}" bindtap="selected1">提现中</span>
+     <span class="dbi {{selected2?'act':''}}" bindtap="selected2">已提现</span>
+  </view>
+   <ul class="recordlist db" wx:for="{{dataList}}"  data-id="{{item.id}}">
+    <li class="addItem db comItemArrow">
+      <span class="fl leftTitle">提现金额</span>
+      <span class="fr red">+ ￥{{item.amount/100}}</span>
+    </li>
+    <li class="addItem db comItemArrow">
+      <span class="fl leftTitle">申请提现时间</span>
+       <span class="fr">{{item.time}}</span>
+    </li>
+    <li class="addItem db comItemArrow">
+      <span class="fl leftTitle">到帐状态</span>
+       <span class="fr">{{item.status=="WAIT_WITHDRAW"?"提现中":"提现成功"}}</span>
+    </li>
+    <li class="addItem db comItemArrow">
+      <span class="fl leftTitle">到帐金额</span>
+      <span class="fr red">￥{{item.realAmount/100}}</span>
+    </li>
+  </ul> 
+<view wx:if="{{hasMore<=0 && dataList.length > 5}}" class="loading_bottom">
+  <span>别扯了，我是有底线的</span>
+  <i></i>
+ </view> 
+<view wx:if="{{isShow&&(!dataList || dataList.length==0)}}" class="null_product">
+  <span></span>
+  <p>暂时没有该信息</p>
+</view>  
+</view>

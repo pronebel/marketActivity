@@ -1,0 +1,46 @@
+.addItem{
+  background: #fff;
+  padding: 0 20rpx;
+  font-size: 28rpx;
+  color: #333333;
+}
+.helplist{
+  overflow: hidden
+}
+.comItemArrow {
+font-size:28rpx;
+color:#1C1C1C;
+height:88rpx;
+display:block;
+line-height:88rpx;
+box-sizing:border-box;
+
+}
+.bbe4 {
+border-bottom:1rpx solid #e4e4e4;
+}
+
+.comItemArrow .iconfont {
+font-size:28rpx;
+color:#ccc
+}
+.fr {
+float:right
+}
+.red{
+  color: #FF6B4E
+}
+.qrcode{
+  width: 300rpx;
+  height: 300rpx;
+  border: 1rpx solid #ddd
+}
+.box{
+  text-align: center;
+  background: #fff;
+  padding: 40rpx;
+}
+.box p{
+  margin-top: 10rpx;
+
+}

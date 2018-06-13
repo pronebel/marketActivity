@@ -1,0 +1,40 @@
+<view>
+  <view class="helpheader">帮助中心</view>
+  <view class="box">
+    <view class="biaot">如何创建砍价活动</view>
+    <view class="text">
+     砍价应用场景
+砍价适用于一些新开的店铺或清库存的店铺通过低价的方式，吸引顾客到实体店进行消费，主要目的通过微信在本地打响知名度，用最少的投入获得最大的广告效果。
+    </view>
+    <view class="text">
+      第一步：点击创建活动
+    </view>
+    <view class="text">
+      第二步：选择砍价活动，并确认活动发布细则
+    </view>
+    <view class="text">
+      第三步：设置活动基本信息
+      <text>注意：</text>
+      <text>1、同店活动是指基于这个帐号下建立的其他活动与本次建立的活动进行关联</text>
+      <text>2、原价是指商品实际销售的价格</text>
+      <text>3、底价是指砍价成功后用户最低的购买价格</text>
+      <text>4、砍价金额区间是指每次用户协助发起人砍价的金额区间,最后点击发布活动</text>
+    </view>
+    <view class="text">
+      第四步：点击活动管理
+    </view>
+    <view class="text">
+      第五步：点击该活动，点击活动海报，生成图片（二维码），保存图片并进行转发
+      <text>注意：</text>
+      <text>1、点击名单可以查看参与拼团活动人员的信息，目前还未开放名单导出功能，后续会开放名单导出功能。</text>
+    </view>
+    <view class="images"><image src="../../../images/kan1.png"></image></view>  
+    <view class="images"><image src="../../../images/tuan1.png"></image></view>
+    <view class="images"><image src="../../../images/kan3.png"></image></view>
+    <view class="images"><image src="../../../images/tuan2.png"></image></view>  
+    <view class="images"><image src="../../../images/tuan3.png"></image></view>
+    <view class="images"><image src="../../../images/kan6.png"></image></view>
+    <view class="images"><image src="../../../images/tuan4.png"></image></view>  
+    <view class="images"><image src="../../../images/tuan5.png"></image></view>
+  </view>
+</view>

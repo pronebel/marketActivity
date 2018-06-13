@@ -1,0 +1,12 @@
+<view class="container">
+   <view class='oneItem' bindtap='addson'>
+      <image class='fl' src="../../../images/icon-tjzizhanghao.png" mode='widthFit'></image>
+      <span class='fl'>添加子账号</span>
+      <i class="fr">+</i>
+   </view>
+    <view class='oneItem' bindtap='becomeson'>
+      <image class='fl' src="../../../images/icon-cwzizhanghao.png" mode='widthFit'></image>
+      <span class='fl'>成为子账号</span>
+      <i class="fr">+</i>
+   </view>
+</view>

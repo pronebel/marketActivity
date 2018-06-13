@@ -1,0 +1,12 @@
+page{
+background: #fff;
+text-align: center;
+padding-top: 120rpx
+}
+image{
+  width: 420rpx;
+  height: 420rpx;
+  border: 1px solid #dfdfdf;
+  margin-bottom: 40rpx
+}
+text{color: #666}

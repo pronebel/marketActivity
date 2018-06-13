@@ -1,0 +1,4 @@
+<view class="container">
+  <image src='{{url}}'></image>
+  <text class='db'>将此码展示给主账号扫描或者截图给对方</text>
+</view>

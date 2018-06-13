@@ -1,0 +1,248 @@
+<view style="position:relative">
+  <form bindsubmit="formSubmit" bindreset="formReset">
+    <view class="fomgroups">
+      <view class="headscing">
+        <image class="scingIcon" src="../../../images/icon-jianjie.png" />
+        <text>基本设置</text>
+      </view>
+      <view class="inputtings">
+        <text class="topics">活动标题</text>
+          <input bindfocus='choiseTles' style='flex:1' focus= '{{ placehold }}' placeholder='不超过30个字' placeholder-class="placehold" name="pullText" value="{{ pullText }}" /> 
+      </view>
+      <view class="section inputtings">
+        <text class="section__title topics">活动开始</text>
+        <picker mode="date" value="{{startdate}}" start="2018-01-01" end="2019-12-30" bindchange="bindstartDateChange">
+          <view class="picker">{{startdate}}</view>
+        </picker>
+      </view>
+      <view class="section inputtings">
+        <text class="section__title topics">活动结束</text>
+        <picker mode="date" value="{{enddate}}" start="2018-01-01" end="2019-12-30" bindchange="bindendDateChange">
+          <view class="picker">{{enddate}}</view>
+        </picker>
+      </view>
+      <view class="inputtings">
+        <text class="topics">其他活动推荐</text>
+        <view class="body-view">
+          <switch checked="{{ recommendActivities }}" bindchange="switchTitleChange"/>
+        </view>
+      </view>  
+      <view class="addClass">
+        <text class="topics">报名必填</text>
+        <view class="body-view">
+          <text class="addsMods">姓名</text>
+          <text class="addsMods">电话</text>
+        </view>
+      </view>
+    </view>
+    <!--  -->
+    <view class="fomgroups">
+      <view class="headscing">
+        <image class="scingIcon" src="../../../images/icon-jianjie.png" />
+        <text>背景音乐</text>
+      </view>
+      <view class="fomgroups">
+        <view class="inputtings">
+          <text class="topics">背景音乐</text>
+          <view class="body-view">
+            <switch bindchange="backMuisc"/>
+          </view>
+        </view>
+        <view class="inputtings" wx:if='{{showMusic}}'>
+          <text class="topics">音乐选择</text>
+          <text bindtap='setMusic'>{{ isMusic }}</text>
+        </view>
+      </view>
+    </view>
+    <!-- 活动设置 -->
+    <view class="fomgroups">
+      <view class="headscing">
+        <image class="scingIcon" src="../../../images/icon-jianjie.png" />
+        <text>活动设置 ( 发布后金额不允许修改 )</text>
+      </view>
+      <view class="inputtings">
+        <text class="topics">每天抽奖次数</text>
+        <input placeholder='请输入每日抽奖次数' type="number" placeholder-class="placehold" name="daySmoke" bindinput='daySmoke' style="flex:1"/>
+      </view>
+      <view class="inputtings">
+        <text class="topics">最多中奖</text>
+        <text>1次</text>
+      </view>
+      <view class="inputtings">
+        <text class="topics">奖励次数</text>
+        <input placeholder='邀请好友最多奖励次数' type="number" placeholder-class="placehold" name="reward" bindinput='reward' style="flex:1"/>
+      </view>
+    </view>
+    <!-- 奖品设置 -->
+    <view class="fomgroups">
+      <view class="headscing">
+        <image class="scingIcon" src="../../../images/icon-jianjie.png" />
+        <text>奖品设置</text>
+      </view>
+      <view wx:for="{{ awardList }}" wx:key="{{ item.id }}">
+        <view class="inputtings">
+          <text class="topics">奖项{{ index+1 }}</text>
+          <view class="body-view">
+            <switch bindchange="awardControls" data-index="{{ index }}"/>
+          </view>
+        </view>
+        <view class="accord" hidden="{{ item.awardControl }}">
+          <view class="inputtings">
+            <text class="topics">奖品名称</text>
+            <input placeholder='请填写奖品名称' placeholder-class="placehold" name="awardcontent" bindinput='awardcontent' data-index="{{ index }}" style="flex:1"/>
+          </view>
+          <view class="inputtings">
+            <text class="topics">中奖概率</text>
+            <input placeholder='整数输入，如30即为中奖率30%' type="digit" placeholder-class="placehold" name="theOdds" bindinput='theOdds' data-index="{{ index }}" />%
+          </view>
+          <view class="inputtings">
+            <text class="topics">奖品数量</text>
+            <input placeholder='请填写奖品数量（需大于0）' type="number" placeholder-class="placehold" name="awardNum" bindinput='awardNum' style="flex:1" data-index="{{ index }}" />
+          </view>
+        </view>
+      </view>
+    </view>
+    <!--  -->
+    <view class="fomgroups seconds">
+      <view class="headscing">
+        <image class="scingIcon" src="../../../images/icon-jianjie.png" />
+        <text>兑换信息</text>
+      </view>
+      <view class="inputtings">
+        <text class="topics">店铺名称</text>
+        <input placeholder='请填写店铺名称' placeholder-class="placehold" value="{{ storeName }}" name="storeName" bindinput='storeName' />
+      </view>
+      <view class="inputtings">
+        <text class="topics">商家地址</text>
+        <input placeholder='单击选择定位，方便用户查找' placeholder-class="placehold" name="merchantAddres" bindinput='merchantAddres' bindtap='chooseAddre' value="{{ merchantAddres }}" style="flex:1"/>
+      </view>
+      <view class="inputtings">
+        <text class="topics" style="color: #fff">商家地址</text>
+        <input placeholder='补充地址（可选）' placeholder-class="placehold" name="replenish" bindinput='replenish' value="{{ replenish }}" style="flex:1"/>
+      </view>
+      <view class="inputtings">
+        <text class="topics">电话服务</text>
+        <input placeholder='如实填写，方便顾客联系' type="number" maxlength='12' placeholder-class="placehold" name="seviceTel" bindinput='seviceTel' value="{{ seviceTel }}"/>
+      </view>
+    </view>
+    <!-- 照片上传 -->
+    <view class="fomgroups seconds">
+      <view class="headscing">
+        <image class="scingIcon" src="../../../images/icon-jianjie.png" />
+        <text>活动描述</text>
+      </view>
+      <view class="inputtings">
+        <text class="topics">活动介绍</text>
+        <input placeholder='不超过800个字' placeholder-class="placehold" maxlength='800' name="activityIntroduce" bindinput='activityIntroduce' /> 
+      </view>
+      <!-- <view class="upImage">
+        <view class="topics">
+          <text>活动主图\n 
+          </text> 
+        </view>
+        <view class="upPhotoBox">
+          <view class="upPhotoBox">
+            <view class="addPdown" wx:for="{{ mainFigure }}" wx:key="{{ item.id }}">
+              <image src="{{ item.url }}"></image>
+            </view>
+            <view bindtap='pushCamera' data-su="6" data-ps="goodsPhos" data-pa="mainFigure" class="addPdown" hidden="{{ leavea }}">+</view>
+            <view bindtap='newsfuntions' class="addPdown" hidden='{{ sworda }}'>-</view>
+          </view>
+        </view>
+        <view class="upNum">{{ goodsPhos }}/6</view>
+      </view> -->
+
+      <view class="upImage">
+        <view class="topics">
+          <text>活动图片\n <text style="font-size: 22rpx;"></text></text>
+        </view>
+        <view class="upPhotoBox">
+          <view class="addPdown" wx:for="{{ picsBox }}" wx:key="{{ item.id }}">
+          <image src="{{ item.url }}"></image> 
+          </view>
+          <view bindtap='addCamera' class="addPdown" hidden="{{ leave }}">+</view>
+          <view bindtap='swordCamera' class="addPdown" hidden='{{ sword }}'>-</view>
+        </view>
+        <view class="upNum">{{ photoNum }}/9</view>
+      </view>
+    </view>
+    <!--  -->
+    <view class="fomgroups seconds">
+      <view class="headscing">
+        <image class="scingIcon" src="../../../images/icon-jianjie.png" />
+        <text>活动规则</text>
+      </view>
+      <view class="upImage"> 
+        <text class="topics">活动规则</text>
+        <!-- bindinput='activityRule'  -->
+        <textarea class="rulebos upPhotoBox" maxlength='800' name="activityRule" value="{{ activityRule }}" bindblur='activityRule'/> 
+      </view>
+    </view>
+    <!--  -->
+    <view class="preservat">
+      <!-- <view class="savepres">保存草稿</view> -->
+       <view class="issue" bindtap='tooFalse' style="width:100%;">发布</view> 
+      <!-- <button class="issue" formType="submit">Submit</button> -->
+    </view>
+    <!-- 标题弹框 -->
+    <view class="titleUp" hidden="{{ bounces }}">
+      <view class="titleBoxs">
+        <image src="../../../images/679560266064421463.png" class="downClose" bindtap="shutDown" />
+        <!-- <i class="iconfont icon-guanbi close" /> -->
+        <view class="titalHead">标题模板</view>
+        <scroll-view class="titalListBox" scroll-y="true">
+          <radio-group class="radio-group">  
+            <label class="radio" wx:for="{{ titleData }}" wx:key='{{ item.titleTemplate.id }}' bindtap='radio' data-text="{{ item.titleTemplate.content }}">
+              <view class="smallRadio">
+                <radio value="" data-id="{{item.titleTemplate.id}}" checked='{{ item.titleTemplate.delFlag }}'/>
+              </view>
+              <text>{{ item.titleTemplate.content }}</text>
+            </label>  
+          </radio-group>
+        </scroll-view>
+        <view class="ranstital">
+        <textarea style="resize:none" name="upText" placeholder='如果没有合适的标题，可自行填写标题' placeholder-class="placehold" value="{{ upText }}" bindblur='uptextGo'/>
+        </view>
+        <text class="choiseOne" bindtap="titleTrue">确定</text>
+      </view>
+    </view>
+    <!-- 必填弹框 -->
+    <view class="mandaUp" hidden="{{ mandaTo }}" style="z-index:10;">
+      <view class="mandaBoxs" style="position: relative;">
+        <image src="../../../images/679560266064421463.png" class="downClose" bindtap="sDown" />
+        <view class="titalHead">设置必填项</view>
+        <view class="mandainput"><input placeholder='填写的信息名' maxlength="10" bindinput='mandaInput' value="{{ mandaText }}"/></view>
+        <text class="choiseOne" bindtap="mandaSub">提交</text>
+      </view>
+    </view>
+    <!-- 背景音乐选择 -->
+    <view class="musicGray" hidden='{{ lookMusic }}'>
+      <view class="whiteback">
+        <image src="../../../images/679560266064421463.png" class="downClose" bindtap="musicClose" />
+        <view class="titalHead">背景音乐</view>
+        <scroll-view style="height: 490rpx;" scroll-y	>
+          <view class="muiscBox">
+            <view class="musicList" wx:for="{{ musicArr }}" wx:key="item.bgm.id">
+              <view class="musicName" bindtap='choseMusic' data-index="{{ index }}" data-name="{{ item.bgm.name }}" data-id="{{ item.bgm.id }}">
+                <view><icon type="{{ item.bgm.types }}" size="16" color="{{ item.bgm.color }}"/> </view>
+                <text>{{ item.bgm.name }}</text>
+              </view>
+              <view
+                class="audition"
+                bindtap='audition'
+                data-index="{{ index }}"
+                data-url="{{ item.bgm.bgmUrl }}"
+                data-ids="{{ item.bgm.id }}"
+              >
+                <text wx:if="{{ item.bgm.haveTry }}">试听</text>
+                <image wx:else src="../../../images/icon-yinybf.png" />
+              </view>
+            </view>
+          </view>
+          <audio class="auditionAudio" id="itemBgm" controls loop></audio> 
+        </scroll-view>
+        <button class="musichoose" bindtap='trueChoose'>确定</button>
+      </view>
+    </view>
+  </form>
+</view>

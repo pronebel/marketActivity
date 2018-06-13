@@ -1,0 +1,90 @@
+{
+  "pages": [
+    "pages/homeCenter/homeCenter",
+    "pages/workList/workList",
+    "pages/rules/rules",
+    "pages/storeShow/storeShow",
+    "pages/storeEdit/storeEdit",
+    "pages/creactActivity/creactActivity",
+    "pages/administerList/administerList",
+    "pages/webView/webView",
+    "pages/regRecord/regRecord",
+    "pages/verification/verification",
+    "pages/withdrawCash/withdrawCash",
+    "pages/withdrawRecord/withdrawRecord",
+    "pages/ModifyEditor/ModifyEditor",
+    "pages/MembersToBuy/MembersToBuy",
+    "pages/helpCenter/helpCenter",
+    "pages/helpCenter_con/helpCenter_con",
+    "pages/contactUs/contactUs",
+    "pages/subAccount/subAccount_List/subAccount_List",
+    "pages/subAccount/subAccount_enter/subAccount_enter",
+    "pages/subAccount/scan_success/scan_success",
+    "pages/subAccount/becomeSub/becomeSub",
+    "pages/subAccount/subAccount_save/subAccount_save",
+    "pages/creactPrompt/creactPrompt",
+    "pages/helpOthers/creactKan/creactKan",
+    "pages/helpOthers/creactTuan/creactTuan",
+    "pages/helpOthers/systemDefult/systemDefult",
+    "pages/helpOthers/withdrawal/withdrawal",
+    "pages/storeModify/storeModify",
+    "pages/varietyActivity/coupon/coupon",
+    "pages/varietyActivity/zeroPurchase/zeroPurchase",
+    "pages/varietyActivity/onePurchase/onePurchase",
+    "pages/varietyActivity/nPurchase/nPurchase",
+    "pages/varietyActivity/giveLike/giveLike",
+    "pages/varietyActivity/giveDiscount/giveDiscount",
+    "pages/varietyActivity/secondsKill/secondsKill",
+    "pages/varietyActivity/luckyDraw/luckyDraw",
+    "pages/varietyActivity/giveLikea/giveLikea",
+    "pages/varietyActivity/bigPage/bigPage",
+    "pages/varietyActivity/freePage/freePage",
+    "pages/varietyActivity/meeting/meeting",
+    "pages/backfill/oneBack/oneBack",
+    "pages/backfill/zeroBack/zeroBack",
+    "pages/backfill/nBack/nBack",
+    "pages/backfill/couponBack/couponBack",
+    "pages/backfill/secondsKillBack/secondsKillBack",
+    "pages/backfill/luckyDrawBack/luckyDrawBack",
+    "pages/backfill/giveLikeBack/giveLikeBack",
+    "pages/backfill/giveLikeaBack/giveLikeaBack",
+    "pages/backfill/bigPageBack/bigPageBack",
+    "pages/backfill/freePageBack/freePageBack",
+    "pages/backfill/giveDiscountBack/giveDiscountBack",
+    "pages/backfill/meetingBack/meetingBack",
+    "pages/index/index",
+    "pages/my/my",
+    "pages/jumpPoster/jumpPoster",
+    "pages/authorized/authorized"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#1d1d1d",
+    "navigationBarTitleText": "智慧门店",
+    "navigationBarTextStyle": "#fff"
+  },
+  "tabBar": {
+    "color": "#333",
+    "selectedColor": "#FF4F00",
+    "backgroundColor": "#fff",
+    "borderStyle": "#cbcbcb",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "iconPath": "images/index.png",
+        "selectedIconPath": "images/index2.png"
+      },
+      {
+        "pagePath": "pages/my/my",
+        "text": "个人中心",
+        "iconPath": "images/my.png",
+        "selectedIconPath": "images/my2.png"
+      }
+    ],
+    "position": "bottom"
+  },
+  "networkTimeout": {
+    "request": 10000
+  }
+}

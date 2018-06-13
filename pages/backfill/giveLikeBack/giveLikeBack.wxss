@@ -1,0 +1,7 @@
+@import "../../../lib/varietyActivity.wxss";/* 活动样式 */
+
+.inputtings .interval {
+  border: 2rpx solid #e4e4e4;
+  height: 30rpx;
+  width: 150rpx;
+}

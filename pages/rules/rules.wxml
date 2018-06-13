@@ -1,0 +1,13 @@
+<scroll-view>
+  <view class="wisdom">智慧门店活动发布细则</view>
+  <scroll-view>文案规则</scroll-view>
+  <view class="checkedsa">
+    <label>
+      <icon class="consentscon {{ consents ? 'actives': '' }}"></icon>
+      <checkbox checked="{{consents}}" style="display: none;"></checkbox>
+      <text style="color: #999;font-size:24rpx;">同意 <text style="color:#DCAC59;">《智慧门店服务协议》</text></text>
+    </label>
+    <view class="creactacty">创建活动</view>
+    <!-- #DCAC59 -->
+  </view>
+</scroll-view>

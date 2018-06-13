@@ -1,0 +1,365 @@
+<view>
+  <view class="articleSea" style="position:relative;">
+    <input class="articleinput" placeholder='请输入手机号' bindinput='telPhones' name="telPhones"/>
+    <image src="../../images/icon-sousuo.png" class="recordSeach" bindtap='telPhoneSeach'/>
+  </view>
+  <!--  -->
+  <view class="recordSieve">
+    <view>
+       <text class="{{ recordScreen == 'diu' ? 'activs' : '' }}" data-index= 'diu' bindtap='recordTar'>全部({{all}})</text>
+    </view>
+    <view>
+       <text class="{{ recordScreen == 'WAIT_VERIFICATION' ? 'activs' : '' }}" data-index="WAIT_VERIFICATION" bindtap='recordTar'>未核销({{not}})</text>
+    </view>
+    <view>
+       <text class="{{ recordScreen == 'VERIFICATION' ? 'activs' : '' }}" data-index="VERIFICATION" bindtap='recordTar'>已核销({{ready}})</text>
+    </view>
+  </view>
+  <!--  -->
+  <scroll-view class="recordListBox">
+    <block wx:if="{{ adcType == 'TUAN' }}">
+      <view class="recordList" wx:for="{{ recordData }}" wx:key="item.id">
+        <view class="periphery">
+          <view class="nameClass">
+            <view class="shells">
+              <image class="regPortrait" src="{{ item.headerLogo }}"></image>
+              <text class="pinName">{{ item.userName }}</text>
+              <text class="pinState">{{ item.status == 'VERIFICATION' ? '已核销' : item.status == 'WAIT_VERIFICATION'?'待核销':item.status == 'DOING'? '进行中' : ' ' }}</text>
+            </view>
+          </view>
+          <!--  -->
+          <view class="pinchInfor">
+            <view>联系电话： {{ item.mobile }}
+              <icon class="tel iconfont icon-dianhua02-copy" />
+              <!-- <icon class="stars iconfont icon-xing" /> -->
+            </view>
+            <!-- <view>报名序号： {{ index+1 }}</view> -->
+            <view class="times">
+              <text>报名时间： {{ item.gmtCreate }}</text>
+              <span bindtap="showDown" data-index="{{ index }}">{{ item.isShow ? '收起' : '展开' }}
+                <i wx:if="{{ item.isShow }}" class="iconfont icon-shang" />
+                <i wx:else class="iconfont icon-xia" />
+              </span> 
+            </view>
+          </view>
+          <!--  -->
+          <view class="projectBox {{ item.isShow ? 'openShow' : '' }}">
+            <view class="pbhead"><icon class="iconfont icon-wenzhang" /><text>拼团信息</text></view>
+            <view class="paymo">
+              <view><text class="payLeft">已支付金额</text><text class="payRight">{{ item.tuanRoster.paidAmount/100 }}</text></view>
+              <view><text class="payLeft">到店支付</text><text class="payRight">{{ item.tuanRoster.notPaid/100 }}</text></view>
+              <view><text class="payLeft">是否团长</text><text class="payRight">{{ item.tuanRoster.isHeader ? '是' : '否' }}</text></view>
+              <view>
+                <text class="payLeft">核销状态</text>
+                <text class="payRight">{{ item.tuanRoster.status == 'VERIFICATION' ? '已核销' : item.tuanRoster.status == 'WAIT_VERIFICATION' ? '未核销' : item.tuanRoster.status == 'DOING' ? '进行中': '' }}</text>
+              </view>
+            </view>
+          </view>
+        </view>
+      </view>
+    </block>
+    <!--  -->
+    <block wx:elif="{{ adcType == 'BARGAIN' }}">
+      <view class="recordList" class="recordList" wx:for="{{ recordData }}" wx:key="item.id">
+        <view class="periphery">
+          <view class="nameClass">
+            <view class="shells">
+              <image class="regPortrait" src="{{ item.headerLogo }}"></image>
+              <text class="pinName">{{ item.userName }}</text>
+              <text class="pinState">{{ item.status == 'VERIFICATION' ? '已核销' : item.status == 'WAIT_VERIFICATION'?'待核销':item.status == 'DOING'? '进行中' : ' ' }}</text>
+            </view>
+          </view>
+          <!--  -->
+          <view class="pinchInfor">
+            <view>联系电话： {{ item.mobile }}</view>
+            <!-- <view>报名序号： {{ index+1 }}</view> -->
+            <view class="times">
+              <text>报名时间： {{ item.gmtCreate }}</text>
+              <span bindtap="showDown" data-index="{{ index }}">{{ item.isShow ? '收起' : '展开' }}
+                <i wx:if="{{ item.isShow }}" class="iconfont icon-shang" />
+                <i wx:else class="iconfont icon-xia" />
+              </span>
+            </view>
+          </view>
+          <!--  -->
+          <view class="projectBox {{ item.isShow ? 'openShow' : '' }}">
+            <view class="pbhead"><text>砍价信息</text></view>
+            <view class="paymo">
+              <view>
+                <text class="payLeft">当前价</text>
+                <text class="payRight">{{ item.bargainRoster.currentPrice/100 }}</text>
+              </view>
+              <view>
+                <text class="payLeft">砍价次数</text>
+                <text class="payRight">{{ item.bargainRoster.bargainTimes }}</text>
+              </view>
+              <view>
+                <text class="payLeft">是否到底价</text>
+                <text class="payRight">{{ item.bargainRoster.minPrice ? '是' : '否'}}</text>
+              </view>
+              <view>
+                <text class="payLeft">核销状态</text>
+                <text class="payRight">{{ item.bargainRoster.status == 'VERIFICATION' ? '已核销' : item.bargainRoster.status == 'WAIT_VERIFICATION' ? '未核销' : item.bargainRoster.status == 'DOING' ? '进行中': '' }}</text>
+              </view>
+            </view>
+          </view>
+        </view>
+      </view>
+    </block>
+    <block wx:elif="{{ adcType == 'QUAN' }}">
+      <view class="recordList" class="recordList" wx:for="{{ recordData }}" wx:key="item.id">
+        <view class="periphery">
+          <view class="nameClass">
+            <view class="shells">
+              <image class="regPortrait" src="{{ item.headerLogo }}"></image>
+              <text class="pinName">{{ item.userName }}</text>
+              <text class="pinState">{{ item.status == 'VERIFICATION' ? '已核销' : item.status == 'WAIT_VERIFICATION'?'待核销':item.status == 'DOING'? '进行中' : ' ' }}</text>
+            </view>
+          </view>
+          <!--  -->
+          <view class="pinchInfor">
+            <view>联系电话： {{ item.mobile }}</view>
+            <!-- <view>报名序号： {{ index+1 }}</view> -->
+            <view class="times">
+              <text>报名时间： {{ item.gmtCreate }}</text>
+              <span bindtap="showDown" data-index="{{ index }}">{{ item.isShow ? '收起' : '展开' }}
+                <i wx:if="{{ item.isShow }}" class="iconfont icon-shang" />
+                <i wx:else class="iconfont icon-xia" />
+              </span>
+            </view>
+          </view>
+          <!--  -->
+          <view class="projectBox {{ item.isShow ? 'openShow' : '' }}">
+            <view class="pbhead"><text>优惠劵信息</text></view>
+            <view class="paymo">
+              <view>
+                <text class="payLeft">领取数量</text>
+                <text class="payRight">{{ item.quanRoster.count }}</text>
+              </view>
+              <view>
+                <text class="payLeft">核销状态</text>
+                <text class="payRight">{{ item.quanRoster.status == 'VERIFICATION' ? '已核销' : item.quanRoster.status == 'WAIT_VERIFICATION' ? '未核销' : item.quanRoster.status == 'DOING' ? '进行中': '' }}</text>
+              </view>
+            </view>
+          </view>
+        </view>
+      </view>
+    </block>
+    <block wx:elif="{{ adcType == 'LOTTERY' }}">
+      <view class="recordList" class="recordList" wx:for="{{ recordData }}" wx:key="item.id">
+        <view class="periphery">
+          <view class="nameClass">
+            <view class="shells">
+              <image class="regPortrait" src="{{ item.headerLogo }}"></image>
+              <text class="pinName">{{ item.userName }}</text>
+              <text class="pinState">{{ item.status == 'VERIFICATION' ? '已核销' : item.status == 'WAIT_VERIFICATION'?'待核销':item.status == 'DOING'? '进行中' : ' ' }}</text>
+            </view>
+          </view>
+          <!--  -->
+          <view class="pinchInfor">
+            <view>联系电话： {{ item.mobile }}</view>
+            <!-- <view>报名序号： {{ index+1 }}</view> -->
+            <view class="times">
+              <text>报名时间： {{ item.gmtCreate }}</text>
+              <span bindtap="showDown" data-index="{{ index }}">{{ item.isShow ? '收起' : '展开' }}
+                <i wx:if="{{ item.isShow }}" class="iconfont icon-shang" />
+                <i wx:else class="iconfont icon-xia" />
+              </span>
+            </view>
+          </view>
+          <!--  -->
+          <view class="projectBox {{ item.isShow ? 'openShow' : '' }}">
+            <view class="pbhead"><text>抽奖信息</text></view>
+            <view class="paymo">
+              <view>
+                <text class="payLeft">奖品</text>
+                <text class="payRight">{{ item.luckyDrawRoster.prizeName }}</text>
+              </view>
+              <view>
+                <text class="payLeft">核销状态</text>
+                <text class="payRight">{{ item.luckyDrawRoster.status == 'VERIFICATION' ? '已核销' : item.luckyDrawRoster.status == 'WAIT_VERIFICATION' ? '未核销' : item.luckyDrawRoster.status == 'DOING' ? '进行中': '' }}</text>
+              </view>
+            </view>
+          </view>
+        </view>
+      </view>
+    </block>
+    <block wx:elif="{{ adcType == 'ASSISTANCE' }}">
+      <view class="recordList" class="recordList" wx:for="{{ recordData }}" wx:key="item.id">
+        <view class="periphery">
+          <view class="nameClass">
+            <view class="shells">
+              <image class="regPortrait" src="{{ item.headerLogo }}"></image>
+              <text class="pinName">{{ item.userName }}</text>
+              <text class="pinState">{{ item.status == 'VERIFICATION' ? '已核销' : item.status == 'WAIT_VERIFICATION'?'待核销':item.status == 'DOING'? '进行中' : ' ' }}</text>
+            </view>
+          </view>
+          <!--  -->
+          <view class="pinchInfor">
+            <view>联系电话： {{ item.mobile }}</view>
+            <!-- <view>报名序号： {{ index+1 }}</view> -->
+            <view class="times">
+              <text>报名时间： {{ item.gmtCreate }}</text>
+              <span bindtap="showDown" data-index="{{ index }}">{{ item.isShow ? '收起' : '展开' }}
+                <i wx:if="{{ item.isShow }}" class="iconfont icon-shang" />
+                <i wx:else class="iconfont icon-xia" />
+              </span>
+            </view>
+          </view>
+          <!--  -->
+          <view class="projectBox {{ item.isShow ? 'openShow' : '' }}">
+            <view class="pbhead"><text>集赞赢礼品</text></view>
+            <view class="paymo">
+              <view>
+                <text class="payLeft">点赞数</text>
+                <text class="payRight">{{ item.assistanceRoster.helpCount }}</text>
+              </view>
+              <view>
+                <text class="payLeft">核销状态</text>
+                <text class="payRight">{{ item.assistanceRoster.status == 'VERIFICATION' ? '已核销' : item.assistanceRoster.status == 'WAIT_VERIFICATION' ? '未核销' : item.assistanceRoster.status == 'DOING' ? '进行中': '' }}</text>
+              </view>
+            </view>
+          </view>
+        </view>
+      </view>
+    </block>
+    <block wx:elif="{{ adcType == 'ASSISTANCE_MONEY' }}">
+      <view class="recordList" class="recordList" wx:for="{{ recordData }}" wx:key="item.id">
+        <view class="periphery">
+          <view class="nameClass">
+            <view class="shells">
+              <image class="regPortrait" src="{{ item.headerLogo }}"></image>
+              <text class="pinName">{{ item.userName }}</text>
+              <text class="pinState">{{ item.status == 'VERIFICATION' ? '已核销' : item.status == 'WAIT_VERIFICATION'?'待核销':item.status == 'DOING'? '进行中' : ' ' }}</text>
+            </view>
+          </view>
+          <!--  -->
+          <view class="pinchInfor">
+            <view>联系电话： {{ item.mobile }}</view>
+            <!-- <view>报名序号： {{ index+1 }}</view> -->
+            <view class="times">
+              <text>报名时间： {{ item.gmtCreate }}</text>
+              <span bindtap="showDown" data-index="{{ index }}">{{ item.isShow ? '收起' : '展开' }}
+                <i wx:if="{{ item.isShow }}" class="iconfont icon-shang" />
+                <i wx:else class="iconfont icon-xia" />
+              </span>
+            </view>
+          </view>
+          <!--  -->
+          <view class="projectBox {{ item.isShow ? 'openShow' : '' }}">
+            <view class="pbhead"><text>助力赢现金</text></view>
+            <view class="paymo">
+              <view>
+                <text class="payLeft">助力次数</text>
+                <text class="payRight">{{ item.assistanceRoster.helpCount }}</text>
+              </view>
+              <view>
+                <text class="payLeft">账户金额</text>
+                <text class="payRight">{{ item.assistanceRoster.moneyCount/100 }}</text>
+              </view>
+              <view>
+                <text class="payLeft">核销状态</text>
+                <text class="payRight">{{ item.assistanceRoster.status == 'VERIFICATION' ? '已核销' : item.assistanceRoster.status == 'WAIT_VERIFICATION' ? '未核销' : item.assistanceRoster.status == 'DOING' ? '进行中': '' }}</text>
+              </view>
+            </view>
+          </view>
+        </view>
+      </view>
+    </block>
+    <block wx:elif="{{ adcType == 'MEETING' }}">
+       <view class="recordList" class="recordList" wx:for="{{ recordData }}" wx:key="item.id">
+        <view class="periphery">
+          <view class="nameClass">
+            <view class="shells">
+              <image class="regPortrait" src="{{ item.headerLogo }}"></image>
+              <text class="pinName">{{ item.userName }}</text>
+              <text class="pinState">{{ item.status == 'VERIFICATION' ? '已核销' : item.status == 'WAIT_VERIFICATION'?'待核销':item.status == 'DOING'? '进行中' : ' ' }}</text>
+            </view>
+          </view>
+          <!--  -->
+          <view class="pinchInfor">
+            <view>联系电话： {{ item.mobile }}</view>
+            <!-- <view>报名序号： {{ index+1 }}</view> -->
+            <view class="times">
+              <text>报名时间： {{ item.gmtCreate }}</text>
+              <span bindtap="showDown" data-index="{{ index }}">{{ item.isShow ? '收起' : '展开' }}
+                <i wx:if="{{ item.isShow }}" class="iconfont icon-shang" />
+                <i wx:else class="iconfont icon-xia" />
+              </span>
+            </view>
+          </view>
+          <!--  -->
+          <view class="projectBox {{ item.isShow ? 'openShow' : '' }}">
+            <view class="pbhead"><text>详情信息</text></view>
+            <view class="paymo">
+              <view wx:if="{{ item.companyName }}">
+                <text class="payLeft">公司名称</text>
+                <text class="payRight">{{ item.companyName }}</text>
+              </view>
+              <view wx:if="{{ item.verificationTime!='' }}">
+                <text class="payLeft">核销时间</text>
+                <text class="payRight">{{ item.verificationTime }}</text>
+              </view>
+              <view wx:if="{{ item.verificationWeixinName }}">
+                <text class="payLeft">核销人微信昵称</text>
+                <text class="payRight">{{ item.verificationWeixinName }}</text>
+              </view>
+              <view>
+                <text class="payLeft">核销状态</text>
+                <text class="payRight">{{ item.mostActRoster.status == 'VERIFICATION' ? '已核销' : item.mostActRoster.status == 'WAIT_VERIFICATION' ? '未核销' : item.mostActRoster.status == 'DOING' ? '进行中': '' }}</text>
+              </view>
+            </view>
+          </view>
+        </view>
+      </view>
+    </block>
+    <block wx:else>
+      <view class="recordList" class="recordList" wx:for="{{ recordData }}" wx:key="item.id">
+        <view class="periphery">
+          <view class="nameClass">
+            <view class="shells">
+              <image class="regPortrait" src="{{ item.headerLogo }}"></image>
+              <text class="pinName">{{ item.userName }}</text>
+              <text class="pinState">{{ item.status == 'VERIFICATION' ? '已核销' : item.status == 'WAIT_VERIFICATION'?'待核销':item.status == 'DOING'? '进行中' : ' ' }}</text>
+            </view>
+          </view>
+          <!--  -->
+          <view class="pinchInfor">
+            <view>联系电话： {{ item.mobile }}</view>
+            <!-- <view>报名序号： {{ index+1 }}</view> -->
+            <view class="times">
+              <text>报名时间： {{ item.gmtCreate }}</text>
+              <span bindtap="showDown" data-index="{{ index }}">{{ item.isShow ? '收起' : '展开' }}
+                <i wx:if="{{ item.isShow }}" class="iconfont icon-shang" />
+                <i wx:else class="iconfont icon-xia" />
+              </span>
+            </view>
+          </view>
+          <!--  -->
+          <view class="projectBox {{ item.isShow ? 'openShow' : '' }}">
+            <view class="pbhead"><text>详情信息</text></view>
+            <view class="paymo">
+              <view>
+                <text class="payLeft">已支付金额</text>
+                <text class="payRight">{{ item.mostActRoster.paidAmount/100 }}</text>
+              </view>
+              <view>
+                <text class="payLeft">未支付金额</text>
+                <text class="payRight">{{ item.mostActRoster.notPaid/100 }}</text>
+              </view>
+              <view>
+                <text class="payLeft">购买数量</text>
+                <text class="payRight">{{ item.mostActRoster.wantbuy }}</text>
+              </view>
+              <view>
+                <text class="payLeft">核销状态</text>
+                <text class="payRight">{{ item.mostActRoster.status == 'VERIFICATION' ? '已核销' : item.mostActRoster.status == 'WAIT_VERIFICATION' ? '未核销' : item.mostActRoster.status == 'DOING' ? '进行中': '' }}</text>
+              </view>
+            </view>
+          </view>
+        </view>
+      </view>
+    </block>
+  </scroll-view>
+  <!-- <view class="exportName">导出名单</view> -->
+</view>

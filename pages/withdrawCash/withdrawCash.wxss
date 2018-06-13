@@ -1,0 +1,59 @@
+page{
+  background: #fff;
+}
+
+.container{
+  padding: 20rpx;
+  background: #fff;
+}
+.logo{
+  width: 100rpx;
+  height: 100rpx;
+  border-radius: 50%;
+  margin-right: 20rpx
+}
+.list_con {
+align-content:space-around;
+vertical-align: middle
+}
+.list_con p{
+   margin-top: 10rpx
+}
+.header{
+  padding: 20px 0;
+  border-bottom: 1px solid #E4E4E4;
+}
+ul{
+  padding: 45rpx 0;
+  border-bottom: 1px solid #E4E4E4;
+}
+ul li{
+  line-height: 48rpx
+}
+.red{
+  color: #FF6B4E;
+}
+.fs52{font-size: 52rpx;margin: 30rpx 0}
+.fs26{font-size: 26rpx;}
+
+.BT button {
+display:block;
+widows:250rpx;
+height:88rpx;
+border-radius:100rpx;
+line-height:88rpx;
+font-size:32rpx;
+margin-top:15rpx;
+}
+.apply{
+  color: #fff;
+  background:#FF6B4E;
+  margin-bottom: 25rpx
+}
+.record{
+  background: #FAFAFA;
+  border: 1px solid #E4E4E4; 
+}
+.BT{
+  padding:25rpx 10rpx
+}

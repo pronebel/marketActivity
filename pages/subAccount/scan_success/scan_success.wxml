@@ -1,0 +1,5 @@
+<view class="container">
+    <icon type="success" size="{{iconSizes}}"/>
+    <text class='db' style='margin-top:10rpx'>绑定成功</text>
+    <view class='txt'>您已成功绑定"<text class='black'>{{shopName}}</text>"的子账号，无法再添加为其他子账号</view>
+  </view> 

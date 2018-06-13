@@ -1,0 +1,28 @@
+.container{
+  padding: 20rpx
+}
+.oneItem{
+  height: 240rpx;
+  line-height: 240rpx;
+  background: #fff;
+  margin-bottom: 20rpx;
+  border-bottom-right-radius: 20rpx;
+  border-top-right-radius: 20rpx;
+  border-left: 10rpx solid #FF6B4E;
+  padding: 0 40rpx 0 52rpx;
+  overflow: hidden
+}
+.oneItem:last-child{
+  border-left: 10rpx solid #0085FF
+}
+.oneItem span{
+  color: #666;
+  font-size: 34rpx;
+  display: inline-block;
+  margin-left: 30rpx
+  }
+image{
+  width: 160rpx;
+  height: 160rpx;
+  margin-top: 40rpx
+}

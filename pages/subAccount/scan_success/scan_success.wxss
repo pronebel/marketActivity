@@ -1,0 +1,12 @@
+.container{
+  text-align: center;
+  padding:100rpx
+}
+.txt{
+  text-align: left;
+  margin-top: 20rpx;
+  color: #999999 
+}
+.black{
+ color: #151515
+}

@@ -1,0 +1,46 @@
+.cation {
+  height: 210rpx;
+  background-color: #fff;
+  text-align: center;
+  line-height: 210rpx;
+}
+
+.lationOne {
+  height: 88rpx;
+  line-height: 88rpx;
+  background-color: #fff;
+  font-size: 30rpx;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 20rpx;
+}
+
+.lationOne text {color: #333333;}
+.lationName {
+  /* flex: 0 0 150rpx; */
+   display: inline-block; 
+   margin: 0 70rpx 0 0;}
+
+.onelations {
+  display: flex;
+  justify-content: space-between;
+  font-size: 30rpx;
+  background-color: #fff;
+  padding: 0 20rpx;
+}
+.lationTrue {
+  color: #fff;
+  background-color: #FF6B4E;
+  width: 690rpx;
+  height: 88rpx;
+  line-height: 88rpx;
+  font-size: 34rpx;
+  border-radius: 100rpx;
+  margin: 50rpx auto 20rpx auto;
+  text-align: center;
+}
+.lationPrompting {
+  font-size: 24rpx;
+  color: #999999;
+  text-align: center;
+}

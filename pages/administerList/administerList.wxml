@@ -1,0 +1,114 @@
+<view>
+  <view class="activeState">
+    <text class="{{ manScreen == 1 ? 'activetState' : '' }}" data-index="1" data-type="null" bindtap='statusSreen'>全部</text>
+    <text class="{{ manScreen == 2 ? 'activetState' : '' }}" data-index="2" data-type="WAIT_START" bindtap='statusSreen'>未开始</text>
+    <text class="{{ manScreen == 3 ? 'activetState' : '' }}" data-index="3" data-type="DOING" bindtap='statusSreen'>活动中</text>
+    <text class="{{ manScreen == 4 ? 'activetState' : '' }}" data-index="4" data-type="EXPIRED" bindtap='statusSreen'>已下线</text>
+    <!-- <text class="{{ manScreen == 5 ? 'activetState' : '' }}" data-index="5" data-type="DELETE" bindtap='statusSreen'>已删除</text> -->
+  </view>
+  <!--  -->
+  <view class="activityCateg">
+    <text class="{{ menType == 1 ? 'categActive' : '' }}" data-index="1" data-type='null' bindtap='fineSreen'>全部</text>
+    <text class="{{ menType == 2 ? 'categActive' : '' }}" data-index="2" data-type="BARGAIN" bindtap='fineSreen'>砍价</text>
+    <text class="{{ menType == 3 ? 'categActive' : '' }}" data-index="3" data-type="TUAN" bindtap='fineSreen'>拼团</text>
+    <text class="{{ menType == 4 ? 'categActive' : '' }}" data-index="4" data-type="LOTTERY" bindtap='fineSreen'>抽奖</text>  
+    <text class="{{ menType == 5 ? 'categActive' : '' }}" data-index="5" data-type="QUAN" bindtap='fineSreen'>优惠劵</text>
+    <view class="moreClass" wx:if="{{ moreBtn }}">
+      <text class="{{ menType == 6 ? 'categActive' : '' }}" data-index="6" data-type="FREEBUY" bindtap='lowerSreen'>0元购</text>
+      <text class="{{ menType == 7 ? 'categActive' : '' }}" data-index="7" data-type="NYUANBUY" bindtap='lowerSreen'>N元购</text>
+      <text class="{{ menType == 8 ? 'categActive' : '' }}" data-index="8" data-type="ONEYUANBUY" bindtap='lowerSreen'>1元购</text>
+      <text class="{{ menType == 9 ? 'categActive' : '' }}" data-index="9" data-type="ASSISTANCE_MONEY" bindtap='lowerSreen'>助力赢现金</text>
+      <text class="{{ menType == 10 ? 'categActive' : '' }}" data-index="10" data-type="ASSISTANCE" bindtap='lowerSreen'>助力赢礼品</text>
+      <text class="{{ menType == 11 ? 'categActive' : '' }}" data-index="11" data-type="SECKILL" bindtap='lowerSreen'>秒杀</text>
+      <text class="{{ menType == 12 ? 'categActive' : '' }}" data-index="12" data-type="BIGPACKAGE" bindtap='lowerSreen'>大礼包</text>
+      <text class="{{ menType == 13 ? 'categActive' : '' }}" data-index="13" data-type="FREEPRODUCT" bindtap='lowerSreen'>免费领礼品</text>
+    </view>
+    <view style="display:inline-block" bindtap="openMore">
+      <icon wx:if="{{ moreBtn }}" class="mores iconfont icon-shang1"></icon>
+      <icon wx:else class="mores iconfont icon-xia1"></icon>
+    </view>
+  </view>
+  <!--  -->
+  <view class="smallAd" hidden='{{littleTip}}'>
+    <text class="iconfont icon-i1"></text>
+    <text style="position: relative;top: -3rpx;margin-left: 6rpx;">点击活动标题查看分享链接及活动数据</text>
+    <text class="iconfont icon-guanbi adminClose" bindtap='tipClose'></text>
+  </view>
+</view>
+<!--列表-->
+<scroll-view class="ministerBox">
+  <view class="ministerList" wx:for="{{ adminDatas }}" wx:key="item.id" >
+    <!--  -->
+    <view class="toolds" bindtap='mineShow' data-index="{{ index }}">
+      <view class="topTopic">
+        <text class="groups {{ item.activityBase.aSingle.color }}">{{ item.activityBase.aSingle.word }}</text>
+        <text class="theadings">{{ item.activityBase.title }}</text>
+      </view>
+      <!--  -->
+      <view class="browse">
+        <view class="peoplnum">
+          <text>浏览人数： {{ item.countModel.BROWSE }}</text>
+          <text class="peopleAfter">报名人数： {{ item.countModel.SIGN }}</text>
+        </view>
+        <view class="stateacs">
+          <text>{{ item.activityBase.status == "WAIT_START" ? '未开始' : item.activityBase.status == "DOING" ? '活动中' : item.activityBase.status == "EXPIRED" ? '已下线' : '已删除'}}</text>
+          <icon wx:if="{{ item.isShow }}" class="iconfont icon-shang1"></icon>
+          <icon wx:else class="iconfont icon-xia1"></icon>
+        </view>
+      </view>
+    </view>
+    <!--  -->
+    <view class="{{ item.isShow ? '' : 'openShow' }}">
+      <view class="toolds">
+        <view class="browBar"><text class="browName">活动传播</text></view>
+        <view class="browBar" style="display:flex;align-items: center;line-height: normal;">
+          <text class="browName">活动链接</text>
+          <text class="browLink" style="overflow:hidden;height:70rpx;position:relative;top: -10rpx;">
+             {{ item.activityBase.shareUrl == null ? '' : item.activityBase.shareUrl}} 
+          </text>
+          <text class="browBtn" bindtap='adminReplication' data-links="{{ item.activityBase.shareUrl }}">复制</text>
+        </view>
+        <view class="browBar" style="display:flex;align-items:center;">
+          <text class="browName">活动海报</text>
+          <!--<text class="browLink" bindtap='seePosters' data-imgLink="{{ item.actPoster }}">点击查看</text>-->
+          <text class="browLink" bindtap='seePosters' data-title='{{ item.actPoster.title }}' data-mainPic='{{ item.actPoster.mainPic }}' data-imgLink="{{ item.activityBase.posterUrl }}">点击查看</text>
+          <text class="browBtn" bindtap='imgLinkDraw' data-imgLink="{{ item.activityBase.posterUrl }}">保存</text>
+        </view>
+        <view class="wthys">
+          <text class="browName">活动数据</text>
+          <view class="fournumBox">
+            <view class="fournum">
+              <text class="throu">{{ item.countModel.BROWSE }}</text>
+              <text class="numberName">浏览次数</text>
+            </view>
+            <view class="fournum">
+              <text class="sharing">{{ item.countModel.SHARE }}</text>
+              <text class="numberName">分享次数</text>
+            </view>
+            <view class="fournum">
+              <text class="enrol">{{ item.countModel.SIGN }}</text>
+              <text class="numberName">报名人数</text>
+            </view>
+            <view class="fournum" style="margin: 0;">
+              <text class="succs">{{ item.countModel.SUCCESS }}</text>
+              <text class="numberName">成功人数</text>
+            </view>
+          </view>
+        </view>
+      </view>
+      <!--  -->
+      <view class="operation">
+        <view bindtap='upEditor' data-ids="{{ item.activityBase.id }}" data-type="{{ item.activityBase.actType }}"><icon class="iconfont icon-editing"></icon><text>编辑</text>
+        </view>
+        <view bindtap='downline' data-id="{{ item.activityBase.id }}" data-line="{{ item.activityBase.status }}">
+          <icon wx:if="{{ item.activityBase.status == 'EXPIRED' }}" class="iconfont icon-CombinedShape"></icon>
+          <icon wx:else class="iconfont icon-xiazai"></icon>
+          <text>{{ item.activityBase.status == 'EXPIRED' ? '上线' : '下线' }}</text>
+          <!-- <text wx:else>上线</text> -->
+        </view>
+        <!-- <view bindtap="deletingMe" data-ids="{{ item.activityBase.id }}" data-type="{{ item.activityBase.actType }}"><icon class="iconfont icon-shanchu"></icon><text>删除</text></view> -->
+        <view bindtap='listBtn' data-id="{{ item.activityBase.id }}" data-type="{{ item.activityBase.actType }}"><icon class="iconfont icon-mingdan"></icon><text>名单</text></view>
+      </view>
+    </view>
+  </view>
+</scroll-view>

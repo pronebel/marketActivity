@@ -1,0 +1,100 @@
+.header-portrait {
+  width: 100%;
+  height: 228rpx;
+  background-color: #FE6868;
+  display: flex;
+  display: -webkit-flex;
+  align-items: center;
+  padding: 0 24rpx;
+}
+.photo-head {
+  border-radius: 50%;
+  width: 132.4rpx;
+  height: 132.4rpx;
+  border: 4rpx solid #fff;
+}
+.individ {
+  color: #FFf;
+  font-size: 28rpx;
+  margin: 0 0 0 24rpx;
+}
+.vipPurchas {
+  height: 88rpx;
+  line-height: 88rpx;
+  background-color: #fff;
+  font-size: 26rpx;
+  position: relative;
+}
+.vioIcons {
+  display: inline-block;
+  width: 38rpx;
+  height: 35rpx;
+  margin: 0 20rpx 0 21rpx;
+  position: relative;
+  top: 6rpx;
+  /* background: url('../../images/icon-vip.png') no-repeat 0 0;  */
+}
+.buyBtn {
+  display: inline-block;
+  width: 100rpx;
+  height: 45rpx;
+  text-align: center;
+  line-height: 44rpx;
+  background-color: #FF6B4E;
+  color: #fff;
+  border-radius: 25rpx;
+  /* position: absolute; */
+  /* right: 40rpx; */
+  float: right;
+  margin: 20rpx 20rpx 0 0;
+}
+.palace-box {
+  background-color: #fff;
+  margin-top: 30rpx;
+  display: flex;
+  display: -webkit-flex; /* Safari */
+  flex-wrap: wrap;
+}
+.palace-items {
+  width: 186rpx;
+  height: 190rpx;
+  font-size: 26rpx;
+  display: -webkit-inline-flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  color: #333333;
+  /* text-align: center; */
+}
+.palace-items image {
+  width: 54rpx;
+  height: 54rpx;
+  display: block;
+  margin: 0 0 16rpx 0;
+}
+
+.notperfect {
+  color: #fff;
+  font-size: 26rpx;
+  margin: 0 0 0 20rpx;
+}
+.goperfect {
+  width: 160rpx;
+  height: 50rpx;
+  border: 2rpx solid #fff;
+  border-radius: 100rpx;
+  text-align: center;
+  line-height: 50rpx;
+  margin: 20rpx 0 0 0;
+}
+.childNo {
+  display: inline-block;
+  height: 34rpx;
+  width: 88rpx;
+  color: #fff;
+  font-size: 24rpx;
+  border-radius: 8rpx;
+  background-color: #FFA300;
+  text-align: center;
+  line-height: 34rpx;
+}

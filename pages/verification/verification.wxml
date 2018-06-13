@@ -1,0 +1,137 @@
+<view>
+  <view class="cation">
+    <view>{{headerCode}}</view>
+  </view>
+  <!--  -->
+  <view>
+    <view class="cationList">
+      <view class="onelations">
+        <view class="lationName">活动名称</view>
+        <text>{{ sweepInfor.actTitle }}</text>
+      </view>
+      <view class="lationOne">
+        <view class="lationName">活动类型</view>
+        <text>{{ actClass }}</text>
+      </view>
+      <block wx:if="{{ sweepInfor.type == 'LUCK_DRAW' }}">
+        <view class="lationOne">
+          <text class="lationName">奖品名称</text>
+          <text>{{ sweepInfor.prizeName }}</text>
+        </view>
+        <view class="lationOne">
+          <text class="lationName">奖品数量</text>
+          <text style="color: #FF6B4E">{{ sweepInfor.prizeNumber }}</text>
+        </view>
+      </block>
+      <block wx:elif='{{ sweepInfor.type == "QUAN" }}'>
+        <view class="lationOne">
+          <text class="lationName">劵类型</text>
+          <text>{{ sweepInfor.quanName }}</text>
+        </view>
+        <view class="lationOne">
+          <text class="lationName">劵内容</text>
+          <text style="color: #FF6B4E">{{ sweepInfor.quanDetail }}</text>
+        </view>
+        <view class="lationOne">
+          <text class="lationName">使用条件</text>
+          <text style="color: #FF6B4E">{{ sweepInfor.quanCondition }}</text>
+        </view>
+      </block>
+      <block wx:elif='{{ sweepInfor.type == "ASSISTANCE_MONEY" }}'>
+        <view class="lationOne">
+          <text class="lationName">账户金额</text>
+          <text>{{ sweepInfor.helpCount/100 }}</text>
+        </view>
+        <view class="lationOne">
+          <text class="lationName">助力人数</text>
+          <text>{{ sweepInfor.peopleCount }}</text>
+        </view>
+      </block>
+      <block wx:elif='{{ sweepInfor.type == "OPEN_TUAN" }}'>
+        <view wx:for="{{ sweepInfor.productModels }}" wx:key="{{ item.id }}">
+          <view class="lationOne">
+            <text class="lationName">商品名称</text>
+            <text>{{ item.name }}</text>
+          </view>
+          <view class="lationOne">
+            <text class="lationName">单价</text>
+            <text>{{ item.price/100 }}</text>
+          </view>
+          <view class="lationOne">
+            <text class="lationName">数量</text>
+            <text>{{ item.number }}</text>
+          </view>
+        </view>
+        <view class="lationOne">
+          <text class="lationName">团长优惠</text>
+          <text>{{ sweepInfor.headerFavour/100 }}</text>
+        </view>
+        <view class="lationOne">
+          <text class="lationName">总价</text>
+          <text>{{ sweepMoney }}</text>
+        </view>
+        <view class="lationOne">
+          <text class="lationName">未支付金额</text>
+          <text style="color: #FF6B4E">{{ paidPrice }}</text>
+        </view>
+        <view class="lationOne">
+          <text class="lationName">已支付金额</text>
+          <text style="color: #FF6B4E">{{ havePay }}</text>
+        </view>
+      </block>
+      <block>
+        <view wx:if="{{ sweepInfor.type != 'MEETING'}}" wx:for="{{ sweepInfor.productModels }}" wx:key="{{ item.id }}" >
+          <view class="lationOne" >
+            <text class="lationName">商品名称</text>
+            <text>{{ item.name }}</text>
+          </view>
+          <view class="lationOne">
+            <text class="lationName">单价</text>
+            <text>{{ item.price/100 }}</text>
+          </view>
+          <view class="lationOne">
+            <text class="lationName">数量</text>
+            <text>{{ item.number }}</text>
+          </view>
+        </view>
+
+        <view class="lationOne">
+          <text class="lationName">总价</text>
+          <text>{{ sweepMoney }}</text>
+        </view>
+        <view class="lationOne">
+          <text class="lationName">未支付金额</text>
+          <text style="color: #FF6B4E">{{ paidPrice }}</text>
+        </view>
+        <view class="lationOne">
+          <text class="lationName">已支付金额</text>
+          <text style="color: #FF6B4E">{{ havePay }}</text>
+        </view>
+      </block>
+      <view class="lationOne">
+        <text class="lationName">客户姓名</text>
+        <text>{{ sweepInfor.userName }}</text>
+      </view>
+      <view class="lationOne">
+        <text class="lationName">客户手机</text>
+        <text>{{ sweepInfor.userMobile }}</text>
+      </view>
+       <view wx:if="{{ sweepInfor.type == 'MEETING' && sweepInfor.companyName!=null}}" class="lationOne">
+        <text class="lationName">公司名称</text>
+        <text>{{sweepInfor.companyName }}</text>
+      </view>
+      <view wx:if="{{ sweepInfor.type == 'MEETING' && sweepInfor.verificationWeixinName!=null}}" class="lationOne">
+        <text class="lationName">核销人微信名</text>
+        <text>{{sweepInfor.verificationWeixinName }}</text>
+      </view>
+      <view wx:if="{{ sweepInfor.type == 'MEETING' && verificationTime!=''}}" class="lationOne">
+        <text class="lationName">核销时间</text>
+        <text>{{verificationTime}}</text>
+      </view>
+    </view>
+  </view>
+  <!--  -->
+  <view wx:if="{{ clickNot }}" class="lationTrue" bindtap='canCation'>确认核销</view>
+  <view wx:else class="lationTrue" style="background-color:#f2f2f2">确认核销</view>
+  <view class="lationPrompting">核销记录可在报名记录中查看</view>
+</view>

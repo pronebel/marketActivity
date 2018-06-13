@@ -1,0 +1,80 @@
+
+<view>
+  <scroll-view>
+    <!--  -->
+    <view class="header-portrait">
+        <image class="photo-head" src="{{ headerPhoto }}" mode="aspectFill" />
+         <!-- <view class="individ" wx:if="{{ perfect }}"> -->
+        <view class="individ">
+          <view style="margin-bottom: 20rpx;">
+            {{ weChatName }}
+            <text class="childNo" wx:if="{{ childNo }}">子账号</text>
+          </view>
+          <view>{{ Mymobile ? Mymobile : '' }}</view>
+        </view> 
+        <!-- <view class="notperfect" wx:else>
+          <view>您还没有完善资料哦</view>
+          <view class="goperfect">完善资料</view>
+        </view> -->
+    </view>
+    <!--  -->
+    <view class="vipPurchas">
+      <view class="vioIcons" wx:if="{{ vips }}"><image style="width: 100%;height: 100%;" src="../../images/icon-vip.png" /></view>
+      <text>到期时间：{{endtimes}}</text>
+      <text class="buyBtn" bindtap='sellPro' data-vip="{{ personalInfor.vip }}">{{ personalInfor.expire ? '续费' : '购买' }}</text>
+    </view>
+    <!--  -->
+
+    <view class="palace-box">
+      <view class="palace-items" style="border: solid #ececec;border-width: 0 1rpx 1rpx 0;" bindtap='creactOut'>
+        <!-- <icon></icon> -->
+        <image src="../../images/icon-huodongcj.png"/>
+        <view>创建活动</view>
+      </view>
+      <view class="palace-items" style="border: solid #ececec;border-width: 0 1rpx 1rpx 0;" bindtap='activityOut'>
+        <image src="../../images/icon-huodonggl.png"/>
+        <view>活动管理</view>
+      </view>
+      <view class="palace-items" style="border: solid #ececec;border-width: 0 1rpx 1rpx 0;" bindtap='cancalOut'>
+        <image src="../../images/icon-huodonghx.png"/>
+        <view>活动核销</view>
+      </view>
+      <!-- <view class="palace-items" style="border: solid #ececec;border-width: 0 0 2rpx 0;">
+        <image src="../../images/icon-xuanchuandy.png"/>
+        <view>宣传单页</view>
+      </view> -->
+      <view class="palace-items" style="border: solid #ececec;border-width: 0 0 1rpx 0;" bindtap='drawCash'>
+        <image src="../../images/icon-zijintx.png"/>
+        <view>资金提现</view>
+      </view>
+      <view class="palace-items" style="border: solid #ececec;border-width: 0 1rpx 1rpx 0;" bindtap='smallShop'>
+        <image src="../../images/Shape1.png"/>
+        <view>小店秀</view>
+      </view>
+       <view class="palace-items" style="border: solid #ececec;border-width: 0 2rpx 2rpx 0;" bindtap='subAccount'>
+        <image src="../../images/icon-zizhangh.png"/>
+        <view>子账号</view>
+      </view>
+      <!-- <view class="palace-items" style="border: solid #ececec;border-width: 0 2rpx 2rpx 0;">
+        <image src="../../images/icon-huiyuangl.png"/>
+        <view>会员管理</view>
+      </view> -->
+      <!-- <view class="palace-items" style="border: solid #ececec;border-width: 0 0 2rpx 0;">
+        <image src="../../images/Shape.png"/>
+        <view>草稿箱</view>
+      </view> -->
+      <view class="palace-items" style="border: solid #ececec;border-width: 0 1rpx 1rpx 0;" bindtap='helpCemter'>
+        <image src="../../images/icon-bangzhuzx.png"/>
+        <view>帮助中心</view>
+      </view>
+      <view class="palace-items" style="border: solid #ececec;border-width: 0 0 1rpx 0;" bindtap='canMine'>
+        <image src="../../images/icon-lianxiwm.png"/>
+        <view>联系我们</view>
+      </view>
+       <view class="palace-items" style="border: solid #ececec;border-width: 0 1rpx 1rpx 0;" bindtap='storeSet'>
+        <image src="../../images/icon-dianpusz.png"/>
+        <view>店铺设置</view>
+      </view>  
+    </view>
+  </scroll-view>
+</view>

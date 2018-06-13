@@ -1,0 +1,56 @@
+<view class="container">
+  <view id='searchBar'>
+     <i class='iconfont icon-search {{flag}}'></i>
+     <input value='{{flag=="showMe"?"搜索":""}}' bindfocus='myfocus' bindblur='myblur'></input>
+  </view>
+   <ul class="helplist db">
+    <li class="db">
+      <image src="http://y.gtimg.cn/music/photo_new/T003R720x288M000000a4LLK2VXxvj.jpg"></image>
+      <view class='list_con'>
+         <p>通用版</p>
+         <view class='red'>
+            <i class='iconfont icon-arrow-right'></i>
+            查看示例
+         </view>
+          <button bindtap='makeIt'>马上制作</button>
+      </view>
+    </li>
+     <li class="db">
+      <image src="http://y.gtimg.cn/music/photo_new/T003R720x288M000000a4LLK2VXxvj.jpg"></image>
+      <view class='list_con'>
+         <p>通用版</p>
+         <view class='red'>
+            <i class='iconfont icon-arrow-right'></i>
+            查看示例
+         </view>
+          <button>马上制作</button>
+      </view>
+    </li>
+     <li class="db">
+      <image src="http://y.gtimg.cn/music/photo_new/T003R720x288M000000a4LLK2VXxvj.jpg"></image>
+      <view class='list_con'>
+         <p>通用版</p>
+         <view class='red'>
+            <i class='iconfont icon-arrow-right'></i>
+            查看示例
+         </view>
+          <button>马上制作</button>
+      </view>
+    </li>
+  <li class="db">
+      <image src="http://y.gtimg.cn/music/photo_new/T003R720x288M000000a4LLK2VXxvj.jpg"></image>
+      <view class='list_con'>
+         <p>通用版</p>
+         <view class='red'>
+            <i class='iconfont icon-arrow-right'></i>
+            查看示例
+         </view>
+          <button>马上制作</button>
+      </view>
+    </li>
+   
+   
+ 
+  </ul> 
+
+</view>

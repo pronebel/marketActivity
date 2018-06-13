@@ -1,0 +1,331 @@
+{
+	"description": "项目配置文件。",
+	"setting": {
+		"urlCheck": false,
+		"es6": true,
+		"postcss": false,
+		"minified": true,
+		"newFeature": true
+	},
+	"compileType": "miniprogram",
+	"libVersion": "1.6.6",
+	"appid": "wxe99e4d76b6cee9a5",
+	"projectname": "%E6%96%B0%E6%96%B0%E8%90%A5%E9%94%80%E5%B7%A5%E5%85%B7",
+	"svr": "",
+	"client": "",
+	"qcloudRoot": "",
+	"miniprogramRoot": "",
+	"condition": {
+		"search": {
+			"current": -1,
+			"list": []
+		},
+		"conversation": {
+			"current": -1,
+			"list": []
+		},
+		"game": {
+			"list": []
+		},
+		"miniprogram": {
+			"current": -1,
+			"list": [
+				{
+					"id": -1,
+					"name": "workList",
+					"pathName": "pages/workList/workList",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "homeCenter",
+					"pathName": "pages/homeCenter/homeCenter",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "creactActivity",
+					"pathName": "pages/creactActivity/creactActivity",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "regRecord",
+					"pathName": "pages/regRecord/regRecord",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "regRecord",
+					"pathName": "pages/administerList/administerList",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "administerList",
+					"pathName": "pages/administerList/administerList",
+					"query": ""
+				},
+				{
+					"id": 11,
+					"name": "helpCenter",
+					"pathName": "pages/helpCenter/helpCenter",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "my",
+					"pathName": "pages/my/my",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "contactUs",
+					"pathName": "pages/contactUs/contactUs",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "subAccount_List",
+					"pathName": "pages/subAccount/subAccount_List/subAccount_List",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "subAccount_enter",
+					"pathName": "pages/subAccount/subAccount_enter/subAccount_enter",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "购买会员",
+					"pathName": "pages/homeCenter/homeCenter",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "购买会员",
+					"pathName": "pages/MembersToBuy/MembersToBuy",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "提示规则",
+					"pathName": "pages/creactPrompt/creactPrompt",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "scan_success",
+					"pathName": "pages/subAccount/scan_success/scan_success",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "becomeSub",
+					"pathName": "pages/subAccount/becomeSub/becomeSub",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "withdrawCash",
+					"pathName": "pages/withdrawCash/withdrawCash",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "withdrawRecord",
+					"pathName": "pages/withdrawRecord/withdrawRecord",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "修改",
+					"pathName": "pages/ModifyEditor/ModifyEditor",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "subAccount_save",
+					"pathName": "pages/subAccount/subAccount_save/subAccount_save",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "帮助中心",
+					"pathName": "pages/helpOthers/withdrawal/withdrawal",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "kan",
+					"pathName": "pages/helpOthers/creactKan/creactKan",
+					"query": "",
+					"scene": "1001"
+				},
+				{
+					"id": -1,
+					"name": "helpCenter_con",
+					"pathName": "pages/helpCenter_con/helpCenter_con",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "toBuy",
+					"pathName": "pages/MembersToBuy/MembersToBuy",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "storeShow",
+					"pathName": "pages/homeCenter/homeCenter",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "storeShow",
+					"pathName": "pages/storeShow/storeShow",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "storeShow",
+					"pathName": "pages/storeShow/storeShow",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "storeShow",
+					"pathName": "pages/homeCenter/homeCenter",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "storeShow",
+					"pathName": "pages/homeCenter/homeCenter",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "storeShow",
+					"pathName": "pages/storeShow/storeShow",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "storeShow",
+					"pathName": "pages/storeShow/storeShow",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "storeShow",
+					"pathName": "pages/storeShow/storeShow",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "cropper",
+					"pathName": "pages/cropper/cropper",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "storeEdit",
+					"pathName": "pages/storeEdit/storeEdit",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "storeEdit",
+					"pathName": "pages/storeEdit/storeEdit",
+					"query": ""
+				},
+				{
+					"id": 35,
+					"name": "index",
+					"pathName": "pages/index/index",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "canvas",
+					"pathName": "pages/canvas/canvas",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "N元购",
+					"pathName": "pages/varietyActivity/nPurchase/nPurchase",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "一元购",
+					"pathName": "pages/varietyActivity/onePurchase/onePurchase",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "零元购",
+					"pathName": "pages/varietyActivity/zeroPurchase/zeroPurchase",
+					"query": ""
+				},
+				{
+					"id": 40,
+					"name": "赢礼品",
+					"pathName": "pages/varietyActivity/giveLike/giveLike",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "限时秒杀",
+					"pathName": "pages/varietyActivity/secondsKill/secondsKill",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "抽奖",
+					"pathName": "pages/varietyActivity/luckyDraw/luckyDraw",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "优惠劵",
+					"pathName": "pages/varietyActivity/coupon/coupon",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "赢现金",
+					"pathName": "pages/varietyActivity/giveLikea/giveLikea",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "oneBack",
+					"pathName": "pages/backfill/oneBack/oneBack",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "oneBack",
+					"pathName": "pages/backfill/oneBack/oneBack",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "creactActivity",
+					"pathName": "pages/creactActivity/creactActivity",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "享折扣",
+					"pathName": "pages/varietyActivity/giveDiscount/giveDiscount",
+					"query": ""
+				}
+			]
+		}
+	}
+}

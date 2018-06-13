@@ -1,0 +1,184 @@
+<wxs module='foo'>
+  function reg(arr,str){
+      return arr.indexOf(str)!='-1'
+  }
+  module.exports = { reg : reg }
+</wxs>
+<view style="position:relative">
+  <form bindsubmit="formSubmit" bindreset="formReset">
+    <view class="fomgroups">
+      <view class="headscing">
+        <image class="scingIcon" src="../../../images/icon-jianjie.png" />
+        <text>基本设置</text>
+      </view>
+      <view class="inputtings">
+        <text class="topics">会议标题</text>
+          <input bindblur='onBlur' bindinput='pullText' focus='{{ placehold }}' maxlength='10' placeholder='不超过10个字' placeholder-class="placehold" name="pullText" value="{{ pullText }}" /> 
+      </view>
+      <view class="section inputtings">
+        <text class="section__title topics">会议开始</text>
+        <picker mode="date" value="{{startdate}}" start="2018-01-01" end="2019-12-30" bindchange="bindstartDateChange">
+          <view class="picker">{{startdate}}</view>
+        </picker>
+      </view>
+      <view class="section inputtings">
+        <text class="section__title topics">会议结束</text>
+        <picker mode="date" value="{{enddate}}" start="2018-01-01" end="2019-12-30" bindchange="bindendDateChange">
+          <view class="picker">{{enddate}}</view>
+        </picker>
+      </view>
+      <view class="inputtings">
+        <text class="topics">参会费用</text>
+        <view class="body-view">
+            <switch checked='{{switches}}' bindchange="backMuisc"/>
+          </view>
+          <text class='free'>{{isFree}}</text>
+      </view>
+     
+      <view class="inputtings" wx:if='{{showMusic}}'>
+          <text class="topics">价格设置</text>
+          <input type='number' placeholder='单位元' maxlength='7' bindinput='setPrice' value='{{currentPrice}}'></input>
+      </view>
+   
+      <view class="addClass">
+        <text class="topics">报名必填</text>
+        <view class="body-view">
+          <text wx:for="{{chooseArr}}" class="addsMods">{{item}}</text>
+        </view>
+        <text bindtap='setRequires' class='choose'>选择</text>
+      </view>
+    </view>
+
+    <!-- 照片上传 -->
+    <view class="fomgroups seconds">
+      <view class="headscing">
+        <image class="scingIcon" src="../../../images/icon-jianjie.png" />
+        <text>会议描述</text>
+      </view>
+      <view class="inputtings">
+        <text class="topics">会议地址</text>
+        <input placeholder='单击选择定位，方便用户查找' placeholder-class="placehold" name="merchantAddres" bindinput='merchantAddres' bindtap='chooseAddre' value="{{ merchantAddres }}"/>
+      </view>
+      <view class="inputtings">
+        <text class="topics">补充地址</text>
+        <input placeholder='00' placeholder-class="placehold" placeholder-class="placehold" name="replenish" bindinput='replenish' value="{{ replenish }}"/>
+      </view>
+      <!-- <view class="inputtings">
+        <text class="topics">会议摘要</text>
+        <input placeholder='请填写会议摘要' placeholder-class="placehold" name="activityIntroduce" value='{{activityIntroduce}}' bindinput='activityIntroduce' />
+      </view> -->
+      <view class="inputtings">
+        <text class="topics">参会人数上限</text>
+        <input type="number" placeholder='请合理设置勿超卖' maxlength='6' placeholder-class="placehold" value='{{merchantNum}}' name="merchantNum" bindinput='merchantNum' />
+         
+      </view>
+      <view class="inputtings">
+        <text class="topics">联系人</text>
+        <input placeholder='请填写联系人姓名' placeholder-class="placehold" name="contactName" value='{{contactName}}' bindinput='contactName' /> 
+      </view>
+       <view class="inputtings">
+        <text class="topics">联系方式</text>
+        <input placeholder='如实填写，方便顾客联系' type="number" maxlength='11' placeholder-class="placehold" name="contactTel" bindinput='contactTel' value="{{ contactTel }}"/>
+      </view>
+      
+      <view class="upImage">
+        <view class="topics">
+          <text>活动主图\n 
+          <!-- <text style="font-size: 22rpx;">(点击可预览)</text> -->
+          </text> 
+        </view>
+        <view class="upPhotoBox">
+          <view class="upPhotoBox">
+            <view class="addPdown" wx:for="{{ mainFigure }}" wx:key="{{ item.id }}">
+              <image src="{{ item.url }}"></image>
+            </view>
+            <view bindtap='pushCamera' data-su="6" data-ps="goodsPhos" data-pa="mainFigure" class="addPdown" hidden="{{ leavea }}">+</view>
+            <view bindtap='newsfuntions' class="addPdown" hidden='{{ sworda }}'>-</view>
+          </view>
+        </view>
+        <view class="upNum">{{ goodsPhos }}/6</view>
+      </view>
+
+    </view>
+    <!--  -->
+    <!-- <view class="fomgroups seconds">
+      <view class="headscing">
+        <image class="scingIcon" src="../../../images/icon-jianjie.png" />
+        <text>活动规则</text>
+      </view>
+      <view class="upImage"> 
+        <text class="topics">活动规则</text> -->
+        <!-- bindinput='activityRule'  -->
+        <!-- <textarea class="rulebos upPhotoBox" maxlength='800' name="activityRule" value="{{ activityRule}}" bindblur='activityRule'/> 
+      </view>
+    </view> -->
+    <view class="fomgroups seconds">
+      <view class="headscing">
+        <image class="scingIcon" src="../../../images/icon-jianjie.png" />
+        <text>会议摘要</text>
+      </view>
+      <view class="upImage"> 
+        <text class="topics">会议摘要</text> 
+         <!-- bindinput='activityRule'   -->
+        <textarea style='height:100rpx' class="rulebos upPhotoBox" maxlength='200' placeholder-class="placehold" name="activityIntroduce" bindinput='activityIntroduce' value='{{activityIntroduce}}' placeholder='请填写会议摘要'/>  
+      </view>
+    </view> 
+    <!--  -->
+    <view class="preservat">
+      <!-- <view class="savepres">保存草稿</view> -->
+       <view class="issue" bindtap='tooFalse' style="width:100%;">发布</view> 
+      <!-- <button class="issue" formType="submit">Submit</button> -->
+    </view>
+   
+    <!-- 必填项选择 -->
+    <view class="musicGray" hidden='{{ lookMusic }}'>
+      <view class="whiteback">
+        <view class="titalHead">必填属性</view>
+        <scroll-view style="height:620rpx;" scroll-y	>
+          <view class="muiscBox">
+          <checkbox-group bindchange="listenerRadioGroup">
+            <view class="musicList">
+              <view class="musicName">
+                <checkbox color="#FF6B4E" checked="{{foo.reg(chooseArr,'身份证号码')}}" value='身份证号码'></checkbox>
+                <text>身份证号码</text>
+              </view>
+            </view>
+            <view class="musicList">
+              <view class="musicName">
+                <checkbox color="#FF6B4E" value='公司名称' checked="{{foo.reg(chooseArr,'公司名称')}}"></checkbox>
+                <text>公司名称</text>
+              </view>
+            </view>
+            <view class="musicList">
+              <view class="musicName">
+              <checkbox color="#FF6B4E" value='所属行业' checked="{{foo.reg(chooseArr,'所属行业')}}"></checkbox>
+                <text>所属行业</text>
+              </view>
+            </view>
+             <view class="musicList">
+              <view class="musicName">
+                <checkbox color="#FF6B4E" value='企业属性' checked="{{foo.reg(chooseArr,'企业属性')}}"></checkbox>
+                <text>企业属性</text>
+              </view>
+            </view>
+            <view class="musicList">
+              <view class="musicName">
+                <checkbox color="#FF6B4E" value='品牌名称' checked="{{foo.reg(chooseArr,'品牌名称')}}"></checkbox>
+                <text>品牌名称</text>
+              </view>
+            </view>
+            <view class="musicList">
+              <view class="musicName">
+                <checkbox color="#FF6B4E" value='品类属性' checked="{{foo.reg(chooseArr,'品类属性')}}"></checkbox>
+                <text>品类属性</text>
+              </view>
+            </view> 
+            </checkbox-group>
+          </view>
+          <!-- <audio class="auditionAudio" id="itemBgm" controls loop></audio>  -->
+        </scroll-view>
+        <button class="musichoose" bindtap='trueChoose'>确定</button>
+      </view>
+    </view>
+  </form>
+</view>

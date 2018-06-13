@@ -1,0 +1,63 @@
+.tab{
+  width: 320rpx;
+  height: 60rpx;
+  margin: 30rpx auto;
+  border: 2px solid #FF6B4E;
+  border-radius: 15rpx;
+  color: #FF6B4E;
+  z-index:99;
+  position:relative;
+
+}
+.dbi{
+  display: inline-block;
+}
+.tab>span{
+   width: 50%;
+    text-align: center;
+    line-height: 60rpx
+}
+.act{
+  background: #FF6B4E;
+  color: #fff
+}
+
+.addItem{
+  background: #fff;
+  padding: 0 20rpx;
+  font-size: 28rpx;
+  color: #333333;
+}
+
+.recordlist{
+  overflow: hidden;
+  margin-bottom: 20rpx
+}
+.recordlist li:first-child{
+  border-bottom:1rpx solid #e4e4e4;
+}
+.comItemArrow {
+font-size:28rpx;
+color:#1C1C1C;
+height:88rpx;
+display:block;
+line-height:88rpx;
+box-sizing:border-box;
+
+}
+.bbe4 {
+border-bottom:1rpx solid #e4e4e4;
+}
+
+.comItemArrow .iconfont {
+font-size:28rpx;
+color:#ccc
+}
+.fr {
+float:right
+}
+.red{
+  color: #FF6B4E;
+  font-size: 30rpx
+}
+.null_product{text-align: center}

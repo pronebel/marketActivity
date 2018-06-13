@@ -1,0 +1,163 @@
+<view class="container">
+  <view class='bargain' wx:if="{{type == 'bargain'}}">
+     <view class='title fs30'>如何创建砍价活动</view>
+     <view class='subtitle'>砍价活动的应用场景</view>
+     <text>砍价适用于一些新开的店铺，通过低价的方式，吸引顾客到实体店进行消费，主要的目的是通过微信自身的传播力进行病毒式传播，在本地的服务商圈进行知名度的打造，用最少的投入，带来最大的广告和流量效果；
+     </text>
+     <view class='subtitle'>创建方法</view>
+     <text class='db'>1，点击商家中心的【创建活动】按钮；</text>
+     <image src="http://image.chuangchuang.cn/common/kanjia/1.jpg" mode="widthFix" class="albumImgBIg"></image>
+     <text class='db'>2，选择砍价活动的模板；</text>
+     <image src='http://image.chuangchuang.cn/common/kanjia/2.png' mode="widthFix"></image>
+     <text class='db'>3，设置活动信息，保存活动；</text>
+     <image src='http://image.chuangchuang.cn/common/kanjia/3.jpg' mode="widthFix"></image>
+     <text class='db'>4，保存草稿或者发布活动；保存草稿后，可在商家中心的【活动管理】当中进行活动修改；发布活动，在活动未开始时，也可进行修改；</text>
+     <image src='http://image.chuangchuang.cn/common/kanjia/4.png' mode="widthFix"></image>
+  </view>  
+
+
+  <view class='tuan' wx:if="{{type=='tuan'}}">
+     <view class='title fs30'>如何创建拼团活动</view>
+     <view class='subtitle'>拼团活动的应用场景</view>
+     <text>拼团是一种快速有效的营销活动，主要玩法是要在限定时间内，通过分享产品链接，找到规定的人数一起购买才能完成拼团；依靠微信等主流社会化媒体进行传播，因此传播速度非常快，非常适合做店铺的引流，拉新，新品推广等，将大量的广告费用或商品投入到拼团，给用户带来实惠，让用户带来用户，是拓展新客的利器。
+     </text>
+     <view class='subtitle'>创建方法</view>
+     <text class='db'>1，点击商家中心的【创建活动】按钮；</text>
+     <image src='http://image.chuangchuang.cn/common/pingtuan/1.jpg' mode="widthFix"></image>
+     <text class='db'>2，选择拼团活动的模板；</text>
+     <image src='http://image.chuangchuang.cn/common/pingtuan/2.png' mode="widthFix"></image>
+     <text class='db'>3，设置活动信息，保存活动；</text>
+     <image src='http://image.chuangchuang.cn/common/pingtuan/3.jpg' mode="widthFix"></image>
+     <text class='db'>4，保存草稿或者发布活动；保存草稿后，可在商家中心的【活动管理】当中进行活动修改；发布活动，在活动未开始时，也可进行修改；</text>
+     <image src='http://image.chuangchuang.cn/common/pingtuan/4.png' mode="widthFix"></image>
+  </view>
+
+  <view class='tuan' wx:if="{{type=='chou'}}">
+     <view class='title fs30'>如何创建抽奖活动</view>
+     <view class='subtitle'>抽奖活动的应用场景</view>
+     <text>抽奖是是一种新型的营销模式，一方面能提高用户和店家的黏度，另一方面能增加用户在参与活动当中的趣味性，增加活动参加的乐趣；商家在活动中，可以通过简单的设置，例如新的商品，商品的折扣券，帮助门店进行新品推广和大促引流。
+     </text>
+     <view class='subtitle'>创建方法</view>
+     <text class='db'>1，点击商家中心的【创建活动】按钮；</text>
+     <image src='http://image.chuangchuang.cn/common/lucky_draw/1.jpg' mode="widthFix"></image>
+     <text class='db'>2，选择抽奖活动的模板；</text>
+     <image src='http://image.chuangchuang.cn/common/lucky_draw/2.png' mode="widthFix"></image>
+     <text class='db'>3，设置活动信息，保存活动；</text>
+     <image src='http://image.chuangchuang.cn/common/lucky_draw/3.jpg' mode="widthFix"></image>
+     <text class='db'>4，保存草稿或者发布活动；保存草稿后，可在商家中心的【活动管理】当中进行活动修改；发布活动，在活动未开始时，也可进行修改；</text>
+     <image src='http://image.chuangchuang.cn/common/lucky_draw/4.png' mode="widthFix"></image>
+  </view>
+
+  <view class='tuan' wx:if="{{type=='juan'}}">
+     <view class='title fs30'>如何创建抽奖活动</view>
+     <view class='subtitle'>优惠券的使用</view>
+     <text>优惠券是我们运营推广过程中最常用的一种工具，作为一种信息的载体，它不仅仅是一种表现的手段，其背后是运营策略的有效实现。
+     </text>
+     <view class='subtitle'>优惠劵活动的应用场景</view>
+     <text><text class="juanhead">红包劵：</text>抽奖是是一种新型的营销模式，一方面能提高用户和店家的黏度，另一方面能增加用户在参与活动当中的趣味性，      增加活动参加的乐趣；商家在活动中，可以通过简单的设置，例如新的商品，商品的折扣券，帮助门店进行新品推广和大促引流。
+     </text>
+     <text><text class="juanhead">满减劵&m满折劵：</text>这类券又叫“引导型”优惠券；我们是从唤醒的角度进行了引导，以重新拉回用户的消费意愿，解决精准营销的问题；\n
+    使用条件：有一定的使用门槛，联合营销的形式，限时使用；\n
+    先决条件：唤醒用户，提高用户的购买频率；
+     </text>
+     <text><text class="juanhead">满赠劵：</text>这类券又叫“刺激型”优惠券；我们通过设定一些有获取门槛的优惠券，让那些原本可以接受高价的用户继续高价购买，而另外那些不能接受高价的用户，则通过优惠券的方式降低价格以满足他们的心理价格。\n
+    使用条件：更高的获取门槛，多种形式，限时使用；\n
+    先决条件：可以尽可能的把利润做到最大化；
+     </text>
+     <view class='subtitle'>创建方法</view>
+     <text class='db'>1，点击商家中心的【创建活动】按钮；</text>
+     <image src='http://image.chuangchuang.cn/common/youhuiquan/1.jpg' mode="widthFix"></image>
+     <text class='db'>2，选择优惠劵活动的模板；</text>
+     <image src='http://image.chuangchuang.cn/common/youhuiquan/2.png' mode="widthFix"></image>
+     <text class='db'>3，设置活动信息，保存活动；</text>
+     <image src='http://image.chuangchuang.cn/common/youhuiquan/3.jpg' mode="widthFix"></image>
+     <text class='db'>4，保存草稿或者发布活动；保存草稿后，可在商家中心的【活动管理】当中进行活动修改；发布活动，在活动未开始时，也可进行修改；</text>
+     <image src='http://image.chuangchuang.cn/common/youhuiquan/4.png' mode="widthFix"></image>
+  </view>
+
+  <view class='tuan' wx:if="{{type =='xian'}}">
+     <view class='title fs30'>如何创集赞赢现金/礼品活动</view>
+     <view class='subtitle'>集赞活动的应用场景</view>
+     <text>集赞是一种能迅速积累粉丝以及人气的活动，商家在商家的店铺页面创建一个活动，用户在看到活动后，邀请自己的朋友给自己点赞助力，每次助力会增加一定的金额或者提高赢取礼品的机会，这样鼓励更多的客户参与活动，邀请更多的人来参加活动；商家可以利用这种活动，快速的获取粉丝以及到店的客户，活动传播呈几何增长，该应用适合各行各业的商家促销；。
+     </text>
+     <view class='subtitle'>创建方法</view>
+     <text class='db'>1，点击商家中心的【创建活动】按钮；</text>
+     <image src='http://image.chuangchuang.cn/common/yingxianjin/1.jpg' mode="widthFix"></image>
+     <text class='db'>2，选择集赞赢现金/礼品活动的模板；</text>
+     <image src='http://image.chuangchuang.cn/common/yingxianjin/2.png' mode="widthFix"></image>
+     <text class='db'>3，设置活动信息，保存活动；</text>
+     <image src='http://image.chuangchuang.cn/common/yingxianjin/3.jpg' mode="widthFix"></image>
+     <text class='db'>4，保存草稿或者发布活动；保存草稿后，可在商家中心的【活动管理】当中进行活动修改；发布活动，在活动未开始时，也可进行修改；</text>
+     <image src='http://image.chuangchuang.cn/common/yingxianjin/4.png' mode="widthFix"></image>
+  </view>
+
+  <view class='tuan' wx:if="{{type =='gouwu'}}">
+     <view class='title fs30'>如何创建0/1/N元购</view>
+     <view class='subtitle'>活动形式</view>
+     <text>0/1/N元购是一种全新的购物方式,是时尚、潮流的风向标,能满足个性、年轻消费者的购物需求,商家提供部分商品，作为活动的商品，可快速获得线下到店客流，帮助线下商家进行成交，提高门店的成交率，也能从间接的提高连带率。
+     </text>
+     <view class='subtitle'>创建方法</view>
+     <text class='db'>1，点击商家中心的【创建活动】按钮；</text>
+     <image src='http://image.chuangchuang.cn/common/buy/1.jpg' mode="widthFix"></image>
+     <text class='db'>2，选择0/1/N元购活动的模板；</text>
+     <image src='http://image.chuangchuang.cn/common/buy/2.png' mode="widthFix"></image>
+     <text class='db'>3，设置活动信息，保存活动；</text>
+     <image src='http://image.chuangchuang.cn/common/buy/3.jpg' mode="widthFix"></image>
+     <text class='db'>4，保存草稿或者发布活动；保存草稿后，可在商家中心的【活动管理】当中进行活动修改；发布活动，在活动未开始时，也可进行修改；</text>
+     <image src='http://image.chuangchuang.cn/common/buy/4.png' mode="widthFix"></image>
+  </view>
+
+  <view class='tuan' wx:if="{{type=='zizhao'}}">
+     <view class='title fs30'>如何使用子帐号</view>
+     <view class='subtitle'>为了商家进行员工和账户管理，为商家准备了子帐号的功能，具体的使用方法如下：</view>
+     <text class='db'>1，点击商户中心的【子帐号】</text>
+     <image src='http://image.chuangchuang.cn/common/zizhanghao/0.jpg' mode="widthFix"></image>
+     <text class='db'>2，老板身份：点击添加子帐号，进入子帐号管理界面，如果店铺没有子帐号，老板可以通过扫一扫界面，扫描员工的账号二位码；员工身份：点击成为子帐号，生成员工二维码，待老板主账号进行扫描添加权限；</text>
+     <image src='http://image.chuangchuang.cn/common/zizhanghao/1.jpg' mode="widthFix"></image>
+     <text class='db'>3，老板点击添加子帐号，弹出添加页面，扫描员工二维码。添加员工；</text>
+     <image src='http://image.chuangchuang.cn/common/zizhanghao/3.png' mode="widthFix"></image>
+     <image src='http://image.chuangchuang.cn/common/zizhanghao/4.png' mode="widthFix"></image>
+     <text class='db'>4，扫描成功后，弹出员工权限页面，添加员工备注，选择店长或导购的权限；点击保存，添加员工信息成功；</text>
+     <image src='http://image.chuangchuang.cn/common/zizhanghao/5.png' mode="widthFix"></image>
+     <text class='db'>5，再次进入商家管理界面，点击添加子帐号，就会出现子帐号列表，如果需要继续添加，则点击【添加】按钮即可，点击【编辑】可以对该账号进行权限的选择，点击【删除】，可对账号进行删除。</text>
+     <image src='http://image.chuangchuang.cn/common/zizhanghao/6.jpg' mode="widthFix"></image>
+  </view>
+
+  <view class='creat' wx:if="{{type=='creat'}}">
+     <view class='title fs30'>如何开通活动的创建权限</view>
+     <text class='db'>1，进入【新营销工具】小程序的商家中心，选择VIP购买；</text>
+     <image src='http://image.chuangchuang.cn/common/create_activity/1.jpg' mode="widthFix"></image>
+     <text class='db'>2，填写商家的基本信息，填写完成后，保存；</text>
+     <image src='http://image.chuangchuang.cn/common/create_activity/2.jpg' mode="widthFix"></image>
+     <text class='db'>3，选择需要购买的套餐，点击【立即开通】</text>
+     <image src='http://image.chuangchuang.cn/common/create_activity/3.jpg' mode="widthFix"></image>
+     <text class='db'>4，支付购买的订单费用，直接微信支付即可；</text>
+     <image src='http://image.chuangchuang.cn/common/create_activity/4.jpg' mode="widthFix"></image>
+  </view>
+  
+  <view class='withdraw' wx:if="{{type=='withdraw'}}">
+     <view class='title fs30'>商家如何快速提现</view>
+     <view class='subtitle'>如何提现：</view>
+     <text>点击商家中心的资金提现按钮即可看到可提现的具体金额，点击提现后资金将在3个工作日自动打到所属于微信钱包。因通过微信支付提现时需收取手续费0.6%（如第三方支付平台及银行手续费用发生变更，费率以实际发生为准），新营销工具将在提现时扣除，记录在商户中心查看。
+     </text>
+      <view class='subtitle'>提现规则：</view>
+      <text>单个商家，单笔日限额2万；提现前微信帐号需要开通钱包实名认证功能，否则无法提现到账。 </text>
+      <view class='subtitle'>在途资金：</view>
+      <text>活动客户已经支付，但未最终核算，或拼团失败等原因，显示在途资金。</text>
+     <text class='db'>1，点击商户中心的【资金提现】</text>
+     <image src='http://image.chuangchuang.cn/common/tixian/1.jpg' mode="widthFix"></image>
+     <text class='db'>2，点击【申请提现】按钮，提交所申请提现的金额；如提现金额达到平台所要求的金额时，会显示提现成功，否则无法提现；</text>
+     <image src='http://image.chuangchuang.cn/common/tixian/2.png' mode="widthFix"></image>
+     <text class='db'>3，提现后，可通过提现记录查看所有的提现记录；可查看提现时间，提现状态，和到账金额，如发现提现的申请金额和到账的金额不一致时，请及时与我们的客服人员联系；</text>
+     <image src='http://image.chuangchuang.cn/common/tixian/3.png' mode="widthFix"></image>
+  </view>
+
+  <view class='charge' wx:if="{{type=='charge'}}">
+     <view class='title fs30'>新营销工具是如何收费的</view>
+     <text class='db' style='line-height:40rpx'>【新营销工具】目前提供的是便捷的营销活动创建工具，快速帮助线下门店进行活动引流，可线上创建，线下核销，多个终端同时操作；目前采用的是会员制收费的形式；商户或个人可根据自己的使用情况，购买我们的体验版，基础版，高级版，旗舰版的服务（目前新营销工具上线对外公测，收费1元1月，如体验到期后，可继续1元续费）.
+如果需要更加丰富的功能或者需要请求线下门店落地服务的，则可以通过电话联系：021-63805695，联系时注明来自新营销工具的使用；
+     </text>
+      <image src='http://image.chuangchuang.cn/common/11.jpg' mode="widthFix"></image>
+  </view>
+ <button class='fs30' type="defaule" bindtap="returnButton">返回</button>
+</view>

@@ -1,0 +1,59 @@
+<view>
+  <scroll-view style="padding: 0 0 88rpx 0">
+    <view class="headscing">
+      <image class="scingIcon" src="../../images/icon-jianjie.png" />
+      <text>图片信息</text>
+    </view>
+    <view class="upImage">
+      <view class="topics">
+        <text>店铺图片\n <text style="font-size: 22rpx;"></text></text>
+      </view>
+      <view class="upPhotoBox">
+        <view class="addPdown" wx:for="{{ picsBox }}" wx:key="{{ item.id }}">
+          <image src="{{ item }}"></image> 
+        </view>
+        <view bindtap='addCamera' class="addPdown" hidden="{{ leave }}">+</view>
+        <view bindtap='swordCamera' class="addPdown" hidden='{{ sword }}'>-</view>
+      </view>
+      <view class="upNum">{{ shopNum }}/6</view>
+    </view>
+    <view class="upImage">
+      <view class="topics">
+        <text>视频主图\n <text style="font-size: 22rpx;"></text></text>
+      </view>
+      <view class="upPhotoBox" style="display: flex">
+        <!-- <view class="addPdown" bindtap='goodsUp' style="position: relative;">
+          +
+        </view> -->
+        <icon type="success_no_circle" size="40" style="margin: 0 0 0 20rpx" hidden='{{ succed }}'/>
+        <view class="videoBtn" bindtap='goodsUp'>上传</view>
+      </view>
+      <!-- <view class="upNum">{{ videoNum }}/1</view> -->
+    </view>
+    <!-- <view style="width:90%;margin: 0 auto;">
+      <video id="myVideo" class="videoBox" src="{{ viewVideo }}" controls poster=""></video>
+    </view> -->
+    <!--  -->
+    <view class="headscing">
+      <image class="scingIcon" src="../../images/icon-jianjie.png" />
+      <text>详细信息</text>
+    </view>
+    <view class="inputtings">
+      <text class="topics">商家名称</text>
+      <input bindfocus='choiseTles' bindblur='onBlur' focus= '{{ placehold }}' placeholder='不超过30个字' placeholder-class="placehold" name="pullText" bindinput='pullText' value="{{ pullText }}" /> 
+    </view>
+    <view class="inputtings">
+        <text class="topics">商家电话</text>
+        <input placeholder='如实填写，方便顾客联系' type="number" maxlength='12' placeholder-class="placehold" name="seviceTel" bindinput='seviceTel' value="{{ seviceTel }}"/>
+      </view>
+      <view class="inputtings">
+        <text class="topics">商家地址</text>
+        <input placeholder='单击选择定位，方便用户查找' placeholder-class="placehold" name="merchantAddres" bindinput='merchantAddres' bindtap='chooseAddre' value="{{ merchantAddres }}" style="flex:1"/>
+      </view>
+      <view class="inputtings">
+        <text class="topics" style="color: #fff">店铺视频</text>
+        <input placeholder='补充地址（可选）' placeholder-class="placehold" name="replenish" bindinput='replenish' value="{{ replenish }}" style="flex:1"/>
+      </view>
+  </scroll-view>
+  <view class="store" bindtap='storeSave'>保存</view>
+</view>

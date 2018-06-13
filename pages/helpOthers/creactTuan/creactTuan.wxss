@@ -1,0 +1,37 @@
+helpheader {
+  height: 88rpx;
+  line-height: 88rpx;
+  background-color: #e4e4e4;
+  padding: 0 0 0 30rpx;
+  font-size: 28rpx;
+  color: #a0a0a0;
+}
+.box {
+  color: #999999;
+  font-size: 24rpx;
+  padding: 0 20rpx;
+}
+.images {
+  width: 660rpx;
+  height: 1334rpx;
+  margin: 20rpx auto;
+}
+.images image{
+  width: 100%;
+  height: 100%;
+}
+.biaot {
+  text-align: center;
+  font-size: 30rpx;
+  margin: 25rpx 0;
+  color: #333333;
+}
+.text {
+  text-indent: 50rpx;
+  line-height: 40rpx;
+  margin: 45rpx 0 0 0;
+}
+.text text {
+  display: block;
+  margin: 20rpx 0;
+}

@@ -1,0 +1,182 @@
+
+.buyMember {
+  background-color: #fff;
+  font-family: PingFangSC-Regular;
+}
+.buyTitle {
+  font-size: 34rpx;
+  color: #333333;
+  height: 88rpx;
+  line-height: 88rpx;
+  padding: 0 0 0 20rpx;
+  font-weight: 600;
+  border-bottom: 2rpx solid #ececec;
+}
+
+.buyPackage {
+  width: 710rpx;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+.packageList {
+  display: block;
+  height: 72rpx; 
+  margin: 40rpx 0 0 0;
+}
+.packageList li {
+  display: block;
+  float: left;
+  width: 166rpx;
+  height: 72rpx;
+  text-align: center;
+  line-height: 62rpx;
+  font-size: 26rpx;
+  color: #666666;
+  border-radius: 12rpx 12rpx 0 0;
+  border: 1rpx solid #E4E4E4;
+  margin: 0 10rpx 0 0;
+}
+.packageList li:last-child{margin: 0;}
+.packageList .actives{
+  border: 2rpx solid #FF6B4E;
+  border-bottom: 2rpx solid #FFF7ED;
+  color: #FF6B4E;
+  position: relative;
+  line-height: 88rpx;
+  top: -11rpx;
+  z-index: 10;
+  background-color: #FFF7ED;
+}
+
+.contentBox {
+  border: 2rpx solid #FF6B4E;
+  /* height: 300rpx; */
+  position: relative;
+  top: -10rpx;
+  background-color: #FFF7ED;
+  border-radius: 0 0 12rpx 12rpx;
+  padding: 20rpx 16rpx;
+}
+.contentBox li {
+  display: block;
+  font-size: 24rpx;
+  margin: 10rpx 0;
+  line-height: 36rpx;
+}
+
+.actualPayment {
+  color: #FF6B4E;
+  font-size: 28rpx;
+  text-align: center;
+  margin: 60rpx 0 65rpx 0;
+}
+
+.agreement {
+  padding: 0 0 0 30rpx;
+  font-size: 26rpx;
+  height: 50rpx;
+  line-height: 50rpx;
+}
+.agreement icon {
+  position: relative;
+  top: 10rpx;
+  margin: 0 20rpx 0 0;
+}
+
+.immediately {
+  font-size: 34rpx;
+  color: #fff;
+  width: 690rpx;
+  height: 88rpx;
+  line-height: 88rpx;
+  background-color: #FF6B4E;
+  border-radius: 100rpx;
+  text-align: center;
+  margin: 0 auto;
+  margin-top: 23rpx;
+  margin-bottom: 20rpx;
+
+}
+.underPrompt {
+  display: flex;
+  justify-content: space-between;
+  font-size: 24rpx;
+  padding: 0 30rpx;
+  color: #999999;
+  padding-bottom: 30rpx;
+}
+.underPrompt text{color:#DCAC59;}
+
+.buyPopup {
+  background-color: rgba(0,0,0,0.6);
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 10;
+}
+.popupBox {
+  width: 650rpx;
+  height: 802rpx;
+  background-color: #fff;
+  margin: 0 auto;
+  margin-top: 168rpx;
+  border-radius: 20rpx;
+  position: relative;
+}
+.popTitle {
+  height: 114rpx;
+  line-height: 114rpx;
+  text-align: center;
+}
+.listBox {
+  border: 2rpx solid #e4e4e4;
+  width: 570rpx;
+  height: 88rpx;
+  margin: 0 auto;
+  margin-bottom: 20rpx;
+  border-radius: 8rpx;
+}
+.listBox input {
+  height: 88rpx;
+  line-height: 88rpx;
+  padding: 0 0 0 20rpx;
+  font-size: 28rpx;
+}
+.place {
+  color: #ccc;
+}
+.btnCan {
+  color: #fff;
+  font-size: 34rpx;
+  width: 570rpx;
+  height: 88rpx;
+  line-height: 88rpx;
+  background-color: #FF6B4E;
+  border-radius: 8rpx;
+  margin: 0 auto;
+  text-align: center;
+}
+.getCode {
+  display: flex;
+  justify-content: space-between;
+}
+.getBtns {
+  width: 200rpx; 
+  font-size: 28rpx;
+  color: #fff;
+  height: 88rpx;
+  line-height: 88rpx;
+  background-color: #FF927D;
+  text-align: center;
+  border-radius: 0 8rpx 8rpx 0;
+}
+.notBtns{ background-color: #ececec; }
+.close {
+  width: 49rpx;
+  height: 89rpx;
+  position: absolute;
+  bottom: -88rpx;
+  right: 80rpx;
+}

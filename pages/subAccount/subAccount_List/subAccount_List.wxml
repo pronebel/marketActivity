@@ -1,0 +1,45 @@
+<view class="container">
+     <ul class='nodata db' wx:if="{{dataList.length===0}}">
+    <li><image style='width:140rpx;height:140rpx' src="../../../images/icon-tjzizhanghao.png" mode='widthFit'></image></li>
+    <li> 暂无关联的子账号</li>
+    <li class="grey">添加后子账号将共享您的账号权限，如活动创建,数据查看和预付款提现,提现收款账号为您的主账号</li> 
+    <li><button bindtap='scan'>添加子账号</button></li>
+  </ul>   
+
+   <view class='list' wx:if="{{dataList.length>0}}">
+   <view  class='flex title'>
+        <span class="db" style="text-align:center">备注</span>
+        <span class="db">角色</span>
+        <span class="db">状态</span>
+   </view>
+    <radio-group bindchange="swiperChange"> 
+    <ul class="recordlist db">
+      <li wx:for="{{dataList}}" class="flex addItem db comItemArrow">
+        <span class="db"> <radio color="#FF6B4E" value='{{index}}'></radio> {{item.description}}</span>
+        <span class="db">{{item.role=='SHOPKEPPER'?'店长':'店员'}}</span>
+        <span class="db">{{item.status=='USING'?'使用中':'禁用'}}</span>
+      </li>
+    </ul> 
+    </radio-group>
+  
+ <ul class="bottom">
+    <li class="dbi" data-name="add" bindtap="scan">
+     <i class="db iconfont icon-tianjiadizhi" style="font-size:40rpx"></i>
+     <p class="db">添加</p>
+    </li>
+    <li class="dbi" data-name="edit" bindtap="pop">
+     <i class="db iconfont icon-editing"></i>
+     <p class="db">编辑</p>
+    </li>
+    <!-- <li class="dbi" data-name="turnOn" bindtap="pop">
+     <i class="db iconfont icon-guanji" style="font-size:40rpx"></i>
+     <p class="db">{{sign=='USING'?'禁用':'启用'}}</p>
+    </li> -->
+    <li class="dbi" data-name="del" bindtap="pop">
+     <i class="db iconfont icon-shanchu"></i>
+     <p class="db">删除</p>
+    </li>
+</ul>
+ </view>   
+
+</view>

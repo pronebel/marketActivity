@@ -1,0 +1,129 @@
+.seachs {
+  border: 1px solid #e4e4e4;
+  height: 56rpx;
+  line-height: 56rpx;
+  width: 710rpx;
+  margin: 16rpx auto;
+  border-radius: 6px;
+  text-align: center;
+  font-size: 24rpx;
+  background-color: #fff;
+}
+.work-screen {
+  height: 88rpx;
+  background-color: #fff;
+  display: flex;
+  align-items: center;
+}
+.sieve {
+  display: inline-block;
+  font-size: 26rpx;
+  background-color: #F2F2F2;
+  /* width: 100rpx;
+  height: 48rpx; */
+  padding: 9rpx 24rpx;
+  line-height: 48rpx;
+  margin: 0 10rpx;
+  text-align: center;
+  border-radius: 100rpx;
+}
+.regimentsList {
+  padding: 20rpx;
+}
+.regiments {
+  background-color: #fff;
+  display: flex;
+  align-items: center;
+  padding: 20rpx;
+}
+.rehimentImg {
+  width: 350rpx;
+  height: 196rpx;
+  /* border: 1px solid red; */
+}
+.rehimentImg image {width: 100%;height: 100%;}
+.regimentText {
+  margin-left: 30rpx;
+}
+.regimentName {
+  font-size: 32rpx;
+  font-weight: 600;
+  display: block;
+  width: 260rpx;
+  overflow: hidden; text-overflow:ellipsis; white-space: nowrap;
+}
+.regiwatch {
+  display: block;
+  font-size: 26rpx;
+  margin: 20rpx 0 44rpx 0;
+  color: #FF6B4E;
+}
+.eyes {
+  position: relative;
+  top: 4rpx;
+  margin-right: 6rpx;
+}
+.handlingBtn {
+  font-size: 26rpx;
+  color: #fff;
+  background-color: #FF6B4E;
+  text-align: center;
+  width: 250rpx;
+  height: 48rpx;
+  line-height: 48rpx;
+  border-radius: 100rpx;
+}
+
+.workModel {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,.6);
+  z-index: 10;
+}
+.modelsBox {
+  width: 590rpx;
+  height: 917rpx;
+  background-color: #fff;
+  /* margin: 0 auto;
+  margin-top: 10%; */
+  border-radius: 20rpx;
+  position:fixed;
+  left: 50%;
+  top: 45%;
+  transform:translate(-50%,-50%);
+}
+.secondKill {
+  width: 590rpx;
+  height: 693rpx;
+}
+.secondKill image{
+  border-radius: 20rpx 20rpx 0 0;
+}
+.fullName {
+  height: 224rpx;
+  text-align: center;
+}
+.killName {
+  padding: 30rpx 0;
+  font-size: 32rpx;
+}
+.killBtn {
+  width: 450rpx;
+  height: 88rpx;
+  line-height: 88rpx;
+  border-radius: 100rpx;
+  background-color: #FF6B4E;
+  color: #fff;
+  font-size: 34rpx;
+  margin: 0 auto;
+}
+.subtra {
+  position: absolute;
+  bottom: -88rpx;
+  right: 140rpx;
+  width: 49rpx;
+  height: 89rpx;
+}
